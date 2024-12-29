@@ -51,52 +51,81 @@ def extract_text_from_pdf(filepath):
         images = convert_from_path(filepath)
         text = ""
         for image in images:
-            text += pytesseract.image_to_string(image, config='--psm 6') + "\n"
-        return text
+            raw_text = pytesseract.image_to_string(image, config='--psm 6') + "\n"
+            sanitized_text = ''.join(c for c in raw_text if c.isalnum() or c.isspace() or c in '.,-')  # Keep specific characters
+            text += sanitized_text
+        return text.lower()  # Normalize case
     except Exception as e:
         log(f"Error extracting text from PDF: {e}", level="ERROR")
         return ""
 
-from fuzzywuzzy import fuzz, process
-from sentence_transformers import util
-import spacy
+def extract_addresses_from_text(ocr_text):
+    """
+    Extracts potential addresses from OCR text using improved regex patterns.
+    """
+    # Normalize the text
+    normalized_text = ocr_text.replace("\n", " ").replace("\u00A0", " ")
+    log(f"Normalized OCR Text: {normalized_text[:500]}...")  # Log the first 500 chars
+
+    # Define regex patterns for addresses
+    patterns = [
+        r'P\.?O\.?\s*Box\s*\d+',  # PO Boxes
+        r'\d+\s+[A-Za-z\s]+(?:St|Street|Ave|Avenue|Blvd|Boulevard|Rd|Road|Dr|Drive|Ln|Lane)',  # Street Addresses
+        r'[A-Za-z\s]+,\s*[A-Z]{2}\s*\d{5}(?:-\d{4})?',  # City, State, ZIP
+        r'\d{1,5}\s+\w+.*?\s+(?:St|Ave|Blvd|Dr|Lane|Rd|Way|Ct|Pl|Park)\b',  # Flexible Street Formats
+        r'\b(?:Suite|Ste|Apt|#)\s*\d+',  # Suite/Apt Numbers
+    ]
+
+    # Combine patterns
+    combined_pattern = r'|'.join(patterns)
+    
+    # Find all matches
+    matches = re.findall(combined_pattern, normalized_text, re.IGNORECASE)
+
+    # Clean matches and remove duplicates
+    cleaned_addresses = list({sanitize_text(match) for match in matches})
+    log(f"Extracted Addresses: {cleaned_addresses}")
+    return cleaned_addresses
 
 # Assuming embedding_model and nlp are already initialized
 
-def fuzzy_match(text, items, threshold=80):
+def fuzzy_match(text, items, base_threshold=80):
     """
-    Fuzzy matches the text against a list of items.
-    Normalizes the input and applies a consistent threshold.
+    Fuzzy matches the text against a list of items with dynamic thresholds.
     """
     if not items:
-        log("No items provided for fuzzy matching", level="WARNING")
+        log("No items provided for fuzzy matching.", level="WARNING")
         return []
-    
+
     # Normalize input
     text = text.strip().lower()
     items = [item.strip().lower() for item in items]
-    
+
+    # Adjust threshold dynamically for short texts
+    dynamic_threshold = max(50, base_threshold - len(text) // 10)
+
+    log(f"Using dynamic threshold: {dynamic_threshold} for text: '{text}'")
     matches = process.extract(text, items, scorer=fuzz.partial_ratio)
-    
+
     # Filter by a consistent threshold
     results = [
         {"item": match[0], "score": match[1]} 
-        for match in matches if match[1] >= threshold
+        for match in matches if match[1] >= dynamic_threshold
     ]
+
+    log(f"Fuzzy match results: {results}")
     return sorted(results, key=lambda x: x['score'], reverse=True)
 
-def sentence_transformer_match(text, items, similarity_threshold=0.75):
+def sentence_transformer_match(text, items, similarity_threshold=0.75, max_batch_size=16):
     """
-    Uses SentenceTransformer for semantic matching.
-    Processes input in batches and normalizes scores.
-    Includes robust input validation and logging for debugging.
+    Uses SentenceTransformer for semantic matching with enhanced validation and logging.
     """
     if not items:
         log("No items provided for SentenceTransformer matching.", level="WARNING")
         return []
 
-    if not text.strip():
-        log("Input text is empty or invalid for SentenceTransformer matching.", level="WARNING")
+    if len(text.strip()) < 3:
+        log(f"Input text is too short for SentenceTransformer matching: '{text}'", level="WARNING")
         return []
 
     # Normalize input
@@ -109,10 +138,10 @@ def sentence_transformer_match(text, items, similarity_threshold=0.75):
 
     try:
         # Encode text and items
-        log(f"Encoding text: {text}")
+        log(f"Encoding text: '{text}'")
         text_embedding = embedding_model.encode(text, convert_to_tensor=True)
-        log(f"Encoding {len(items)} items for matching.")
-        item_embeddings = embedding_model.encode(items, convert_to_tensor=True, batch_size=16)
+        log(f"Encoding {len(items)} items for matching with batch size {max_batch_size}.")
+        item_embeddings = embedding_model.encode(items, convert_to_tensor=True, batch_size=max_batch_size)
 
         # Compute cosine similarity
         log("Computing cosine similarity.")
@@ -131,8 +160,8 @@ def sentence_transformer_match(text, items, similarity_threshold=0.75):
 
 def spacy_match(text, items, similarity_threshold=0.75):
     """
-    Matches text against items using spaCy similarity.
-    Processes items in a batch for efficiency and handles edge cases.
+    Matches text against a specific set of items using spaCy similarity.
+    Ensures inputs are sanitized and strictly adheres to the provided item list.
     """
     if not items:
         log("No items provided for spaCy matching.", level="WARNING")
@@ -148,7 +177,7 @@ def spacy_match(text, items, similarity_threshold=0.75):
         log("Input text has empty vectors; skipping spaCy similarity.", level="WARNING")
         return []
 
-    # Preprocess and batch-create spaCy Doc objects for items
+    # Preprocess and batch-create spaCy Doc objects for valid items only
     preprocessed_items = [item.lower() for item in items]
     item_docs = list(nlp.pipe(preprocessed_items))
 
@@ -173,9 +202,24 @@ def spacy_match(text, items, similarity_threshold=0.75):
 
 def sanitize_text(text):
     """
-    Converts text to lowercase and removes special characters except currency symbols.
+    Sanitizes text by:
+    - Converting to lowercase.
+    - Replacing non-breaking spaces (\xa0) and newlines (\n) with regular spaces.
+    - Removing special characters except currency symbols ($, €, £).
+    - Collapsing multiple spaces into a single space.
+    - Stripping leading and trailing spaces.
     """
-    return re.sub(r'[^a-zA-Z0-9\s$€£]', '', text.lower())
+    # Replace non-breaking spaces and newlines with regular spaces
+    text = text.replace("\xa0", " ").replace("\n", " ")
+
+    # Remove special characters except for currency symbols
+    text = re.sub(r'[^a-zA-Z0-9\s$€£]', '', text.lower())
+
+    # Collapse multiple spaces into a single space
+    text = re.sub(r'\s+', ' ', text)
+
+    # Strip leading and trailing spaces
+    return text.strip()
 
 def load_suppliers():
     filepath = os.path.join(UPLOAD_FOLDER_SUPPLIERS, 'suppliers.csv')
@@ -183,13 +227,7 @@ def load_suppliers():
         return []
     with open(filepath, mode='r') as file:
         reader = csv.DictReader(file)
-        return [
-            {
-                "id": row["Supplier_ID"],
-                "name": sanitize_text(row["Supplier_Name"])
-            }
-            for row in reader
-        ]
+        return [{"id": row["Supplier_ID"], "name": sanitize_text(row["Supplier_Name"])} for row in reader]
 
 def load_addresses():
     filepath = os.path.join(UPLOAD_FOLDER_ADDRESSES, 'addresses.csv')
@@ -226,14 +264,14 @@ def get_aggregated_supplier(spacy_results, fuzzy_results, sentence_results, supp
 
     return best_supplier.capitalize(), supplier_id
 
-def get_aggregated_address(spacy_results, fuzzy_results, sentence_results, addresses):
+def get_aggregated_address(spacy_results, fuzzy_results, sentence_results, existing_address):
     """
     Aggregates results from spaCy, fuzzy matching, and SentenceTransformer.
-    Returns the best-matched address.
+    Returns the best-matched address by combining prediction scores and comparing with an existing address.
     """
     all_results = spacy_results + fuzzy_results + sentence_results
     if not all_results:
-        return "No result"
+        return existing_address or "No result"
 
     # Aggregate scores by address
     scores = {}
@@ -242,8 +280,17 @@ def get_aggregated_address(spacy_results, fuzzy_results, sentence_results, addre
         score = res.get("score", 0)
         scores[item] = scores.get(item, 0) + score
 
+    # Include the existing address in the scoring
+    if existing_address:
+        normalized_existing_address = sanitize_text(existing_address)
+        scores[normalized_existing_address] = scores.get(normalized_existing_address, 0) + 100
+
     # Find the best match
     best_address = max(scores, key=scores.get) if scores else "No result"
+
+    # Check if the best match aligns with the existing address
+    if best_address == sanitize_text(existing_address):
+        return existing_address
 
     return best_address
 
@@ -252,27 +299,38 @@ def index():
     document_files = os.listdir(STATIC_FOLDER_DOCUMENTS)
     document_summaries = []
 
+    # Fetch uploaded file information
     uploaded_supplier_file = next((f for f in os.listdir(UPLOAD_FOLDER_SUPPLIERS) if f.endswith('.csv')), "No file uploaded")
     uploaded_address_file = next((f for f in os.listdir(UPLOAD_FOLDER_ADDRESSES) if f.endswith('.csv')), "No file uploaded")
 
+    # Load suppliers and addresses
     suppliers = load_suppliers()
+    address_mapping = {row["Supplier_ID"]: row["Formatted_Address"] for row in load_addresses_with_ids()}
 
     for filename in document_files:
         result = document_results.get(filename, {})
+        
+        # Lookup supplier address based on supplier_id
+        supplier_id = result.get("supplier_id", "No ID")
+        supplier_address = address_mapping.get(supplier_id, "No address found")
+
+        # Append document summary
         document_summaries.append({
             "filename": filename,
             "has_results": bool(result),
             "aggregated_supplier": result.get("aggregated_supplier", "No result"),
-            "supplier_id": result.get("supplier_id", "No ID"),  # Add supplier_id
-            "aggregated_address": result.get("aggregated_address", "No result"),
-            "address_supplier_id": result.get("address_supplier_id", "No ID")  # Add address_supplier_id
+            "supplier_id": supplier_id,
+            "supplier_address": supplier_address,  # Add supplier address from address_mapping
+            "aggregated_address": result.get("aggregated_address", "No result"),  # Predicted address from OCR
         })
 
-    return render_template('index.html',
-                           document_summaries=document_summaries,
-                           uploaded_supplier_file=uploaded_supplier_file,
-                           uploaded_address_file=uploaded_address_file)
-
+    # Render the index template
+    return render_template(
+        'index.html',
+        document_summaries=document_summaries,
+        uploaded_supplier_file=uploaded_supplier_file,
+        uploaded_address_file=uploaded_address_file
+    )
 @app.route('/upload_files', methods=['POST'])
 def upload_files():
     supplier_file = request.files.get('supplier_file')
@@ -310,17 +368,16 @@ def view_document(filename):
     ocr_text = result.get("ocr_text", "")
 
     # Collect logs
-    logs = []  # You can define how you want to collect logs here
-    if "logs" in result:
-        logs = result["logs"]  # If logs are stored in the result
+    logs = result.get("logs", [])  # If logs are stored in the result
 
     # Render the document.html template with the relevant data
     return render_template(
         'document.html',
         filename=filename,
-        result=result,
+        document=result,  # Pass result as document
+        result=result,    # Explicitly pass result for backward compatibility
         ocr_text=ocr_text,
-        logs=logs  # Pass logs to the template
+        logs=logs
     )
 
 @app.route('/delete_all', methods=['POST'])
@@ -347,40 +404,34 @@ def delete_address_csv():
         os.remove(address_filepath)
     return redirect(url_for('index'))
 
+STATIC_FOLDER_DOCUMENTS = os.path.join(app.root_path, 'static/documents')
+
+@app.route('/static/<path:filename>')
+def serve_static(filename):
+    return send_from_directory(STATIC_FOLDER_DOCUMENTS, filename)
+
 @app.route('/scan_documents', methods=['POST'])
 def scan_documents():
     document_files = os.listdir(STATIC_FOLDER_DOCUMENTS)
     suppliers = load_suppliers()
-    supplier_names = [supplier['name'] for supplier in suppliers]
-    addresses = load_addresses()
+    supplier_names = [supplier['name'] for supplier in suppliers]  # Strictly filtered names
 
     for filename in document_files:
         file_path = os.path.join(STATIC_FOLDER_DOCUMENTS, filename)
         
         log(f"Starting OCR for file: {filename}")
         ocr_text = extract_text_from_pdf(file_path)
-        log(f"OCR completed for {filename}: {ocr_text[:100]}...")  # Log the first 100 characters of OCR
+        log(f"OCR completed for {filename}: {ocr_text[:100]}...")  # Log first 100 characters of OCR
 
-        # Perform matching for suppliers
+        # Perform matching for suppliers, strictly within supplier_names
         log(f"Starting supplier matching for {filename}")
         supplier_spacy_results = spacy_match(ocr_text, supplier_names)
         supplier_fuzzy_results = fuzzy_match(ocr_text, supplier_names)
         supplier_sentence_results = sentence_transformer_match(ocr_text, supplier_names)
 
-        # Perform matching for addresses
-        log(f"Starting address matching for {filename}")
-        address_spacy_results = spacy_match(ocr_text, addresses)
-        address_fuzzy_results = fuzzy_match(ocr_text, addresses)
-        address_sentence_results = sentence_transformer_match(ocr_text, addresses)
-
         # Aggregate supplier results
         aggregated_supplier, supplier_id = get_aggregated_supplier(
             supplier_spacy_results, supplier_fuzzy_results, supplier_sentence_results, suppliers
-        )
-
-        # Aggregate address results
-        aggregated_address = get_aggregated_address(
-            address_spacy_results, address_fuzzy_results, address_sentence_results, addresses
         )
 
         # Save results
@@ -389,7 +440,6 @@ def scan_documents():
             "ocr_text": ocr_text,
             "aggregated_supplier": aggregated_supplier,
             "supplier_id": supplier_id,
-            "aggregated_address": aggregated_address,
             "spacy_results": supplier_spacy_results,
             "fuzzy_results": supplier_fuzzy_results,
             "sentence_results": supplier_sentence_results,
@@ -399,22 +449,42 @@ def scan_documents():
     log("Document scanning and processing completed.")
     return redirect(url_for('index'))
 
+def load_addresses_with_ids():
+    """
+    Loads addresses along with their Supplier IDs from the addresses.csv file.
+    """
+    filepath = os.path.join(UPLOAD_FOLDER_ADDRESSES, 'addresses.csv')
+    if not os.path.exists(filepath):
+        return []
+    with open(filepath, mode='r') as file:
+        reader = csv.DictReader(file)
+        return [
+            {
+                "Supplier_ID": row["Supplier_ID"],
+                "Formatted_Address": sanitize_text(row["Formatted_Address"])
+            }
+            for row in reader
+        ]
+
 @app.route('/view_supplier_csv')
 def view_supplier_csv():
     filepath = os.path.join(UPLOAD_FOLDER_SUPPLIERS, 'suppliers.csv')
     if os.path.exists(filepath):
         with open(filepath, 'r') as f:
-            data = f.read().splitlines()
-        return render_template('view_csv.html', title="Supplier CSV", data=data)
+            reader = csv.DictReader(f)
+            data = [{"id": row["Supplier_ID"], "name": row["Supplier_Name"]} for row in reader]
+        return render_template('view_csv.html', title="Suppliers", data=data)
     return redirect(url_for('index'))
+
 
 @app.route('/view_address_csv')
 def view_address_csv():
     filepath = os.path.join(UPLOAD_FOLDER_ADDRESSES, 'addresses.csv')
     if os.path.exists(filepath):
         with open(filepath, 'r') as f:
-            data = f.read().splitlines()
-        return render_template('view_csv.html', title="Address CSV", data=data)
+            reader = csv.DictReader(f)
+            data = [{"id": row["Supplier_ID"], "address": row["Formatted_Address"]} for row in reader]
+        return render_template('view_csv.html', title="Addresses", data=data)
     return redirect(url_for('index'))
 
 @app.route('/predict_suppliers', methods=['POST'])

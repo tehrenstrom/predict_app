@@ -23,7 +23,23 @@
         .feedback-text {
             white-space: pre-wrap; /* Ensures the text is wrapped properly */
         }
+        .hidden {
+            display: none;
+        }
     </style>
+    <script>
+        function toggleVisibility(id) {
+            const element = document.getElementById(id);
+            const button = document.getElementById(id + '-toggle');
+            if (element.classList.contains('hidden')) {
+                element.classList.remove('hidden');
+                button.textContent = 'Show Less';
+            } else {
+                element.classList.add('hidden');
+                button.textContent = 'Show More';
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container mt-5">
@@ -36,31 +52,153 @@
         <!-- Aggregated Supplier -->
         <div class="card mb-4">
             <div class="card-header bg-primary text-white">
-                Aggregated Supplier
+                Aggregated Supplier Prediction
             </div>
             <div class="card-body">
                 <p><strong>Supplier Name:</strong> {{ result.get('aggregated_supplier', 'No result') }}</p>
                 <p><strong>Supplier ID:</strong> {{ result.get('supplier_id', 'No result') }}</p>
+                <p><strong>Supplier Address (from Supplier CSV):</strong> {{ result.get('supplier_address', 'No address found') }}</p>
             </div>
         </div>
 
-        <!-- Aggregated Remit-To Address -->
+        <!-- Remit-To Address Matching -->
         <div class="card mb-4">
             <div class="card-header bg-success text-white">
                 Aggregated Remit-To Address
             </div>
             <div class="card-body">
-                <p><strong>Address:</strong> {{ result.get('aggregated_address', 'No result') }}</p>
-                <p><strong>Address Supplier ID:</strong> {{ result.get('address_supplier_id', 'No result') }}</p>
+                <p><strong>Predicted Address:</strong> {{ result.get('aggregated_address', 'No result') }}</p>
+                <p><strong>Predicted Address Supplier ID:</strong> {{ result.get('address_supplier_id', 'No result') }}</p>
+            </div>
+        </div>
+        <!-- Extracted Addresses -->
+<div class="card mb-4">
+    <div class="card-header bg-warning text-dark">
+        Extracted Addresses from OCR
+    </div>
+    <div class="card-body">
+        <ul>
+            {% for address in result.get('extracted_addresses', []) %}
+            <li>{{ address }}</li>
+            {% else %}
+            <p>No addresses extracted from OCR.</p>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+        <!-- Supplier Predictions -->
+        <div class="card mb-4">
+            <div class="card-header bg-info text-white">
+                Supplier Predictions (Combined Results)
+            </div>
+            <div class="card-body">
+                <h5>spaCy Results:</h5>
+                <ul>
+                    {% for supplier in result.get('spacy_results', [])[:10] %}
+                    <li>{{ supplier.item }} (Score: {{ supplier.score }})</li>
+                    {% endfor %}
+                </ul>
+                {% if result.get('spacy_results', [])|length > 10 %}
+                <ul id="spacy-supplier-extra" class="hidden">
+                    {% for supplier in result.get('spacy_results', [])[10:] %}
+                    <li>{{ supplier.item }} (Score: {{ supplier.score }})</li>
+                    {% endfor %}
+                </ul>
+                <button id="spacy-supplier-extra-toggle" class="btn btn-link p-0" onclick="toggleVisibility('spacy-supplier-extra')">Show More</button>
+                {% endif %}
+
+                <h5>Fuzzy Results:</h5>
+                <ul>
+                    {% for supplier in result.get('fuzzy_results', [])[:10] %}
+                    <li>{{ supplier.item }} (Score: {{ supplier.score }})</li>
+                    {% endfor %}
+                </ul>
+                {% if result.get('fuzzy_results', [])|length > 10 %}
+                <ul id="fuzzy-supplier-extra" class="hidden">
+                    {% for supplier in result.get('fuzzy_results', [])[10:] %}
+                    <li>{{ supplier.item }} (Score: {{ supplier.score }})</li>
+                    {% endfor %}
+                </ul>
+                <button id="fuzzy-supplier-extra-toggle" class="btn btn-link p-0" onclick="toggleVisibility('fuzzy-supplier-extra')">Show More</button>
+                {% endif %}
+
+                <h5>Sentence Transformer Results:</h5>
+                <ul>
+                    {% for supplier in result.get('sentence_results', [])[:10] %}
+                    <li>{{ supplier.item }} (Score: {{ supplier.score }})</li>
+                    {% endfor %}
+                </ul>
+                {% if result.get('sentence_results', [])|length > 10 %}
+                <ul id="sentence-supplier-extra" class="hidden">
+                    {% for supplier in result.get('sentence_results', [])[10:] %}
+                    <li>{{ supplier.item }} (Score: {{ supplier.score }})</li>
+                    {% endfor %}
+                </ul>
+                <button id="sentence-supplier-extra-toggle" class="btn btn-link p-0" onclick="toggleVisibility('sentence-supplier-extra')">Show More</button>
+                {% endif %}
             </div>
         </div>
 
-        <!-- PDF Viewer -->
+        <!-- Remit-To Predictions -->
+        <div class="card mb-4">
+            <div class="card-header bg-info text-white">
+                Remit-To Address Predictions (Combined Results)
+            </div>
+            <div class="card-body">
+                <h5>spaCy Results:</h5>
+                <ul>
+                    {% for address in result.get('address_spacy_results', [])[:10] %}
+                    <li>{{ address.item }} (Score: {{ address.score }})</li>
+                    {% endfor %}
+                </ul>
+                {% if result.get('address_spacy_results', [])|length > 10 %}
+                <ul id="spacy-address-extra" class="hidden">
+                    {% for address in result.get('address_spacy_results', [])[10:] %}
+                    <li>{{ address.item }} (Score: {{ address.score }})</li>
+                    {% endfor %}
+                </ul>
+                <button id="spacy-address-extra-toggle" class="btn btn-link p-0" onclick="toggleVisibility('spacy-address-extra')">Show More</button>
+                {% endif %}
+
+                <h5>Fuzzy Results:</h5>
+                <ul>
+                    {% for address in result.get('address_fuzzy_results', [])[:10] %}
+                    <li>{{ address.item }} (Score: {{ address.score }})</li>
+                    {% endfor %}
+                </ul>
+                {% if result.get('address_fuzzy_results', [])|length > 10 %}
+                <ul id="fuzzy-address-extra" class="hidden">
+                    {% for address in result.get('address_fuzzy_results', [])[10:] %}
+                    <li>{{ address.item }} (Score: {{ address.score }})</li>
+                    {% endfor %}
+                </ul>
+                <button id="fuzzy-address-extra-toggle" class="btn btn-link p-0" onclick="toggleVisibility('fuzzy-address-extra')">Show More</button>
+                {% endif %}
+
+                <h5>Sentence Transformer Results:</h5>
+                <ul>
+                    {% for address in result.get('address_sentence_results', [])[:10] %}
+                    <li>{{ address.item }} (Score: {{ address.score }})</li>
+                    {% endfor %}
+                </ul>
+                {% if result.get('address_sentence_results', [])|length > 10 %}
+                <ul id="sentence-address-extra" class="hidden">
+                    {% for address in result.get('address_sentence_results', [])[10:] %}
+                    <li>{{ address.item }} (Score: {{ address.score }})</li>
+                    {% endfor %}
+                </ul>
+                <button id="sentence-address-extra-toggle" class="btn btn-link p-0" onclick="toggleVisibility('sentence-address-extra')">Show More</button>
+                {% endif %}
+            </div>
+        </div>
+                <!-- PDF Viewer -->
         <div class="card mb-4">
             <div class="card-header bg-info text-white">
                 Document Viewer
             </div>
             <div class="card-body">
+                {% if filename %}
                 <iframe 
                     src="{{ url_for('static', filename='documents/' ~ filename) }}" 
                     width="100%" 
@@ -68,76 +206,12 @@
                     style="border: none;">
                 </iframe>
                 <p class="text-muted mt-2">
-                    If the document doesn't display, you can <a href="{{ url_for('static', filename='documents/' ~ filename) }}" target="_blank">download it here</a>.
+                    If the document doesn't display, you can 
+                    <a href="{{ url_for('static', filename='documents/' ~ filename) }}" target="_blank">download it here</a>.
                 </p>
-            </div>
-        </div>
-
-        <!-- Supplier Results -->
-        <div class="row">
-            <div class="col-md-4">
-                <h3>Supplier spaCy Results</h3>
-                <ul>
-                    {% for supplier in result.get('spacy_results', []) %}
-                    <li>{{ supplier }}</li>
-                    {% else %}
-                    <li>No suppliers found</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h3>Supplier Fuzzy Results</h3>
-                <ul>
-                    {% for supplier in result.get('fuzzy_results', []) %}
-                    <li>{{ supplier.item }} (Score: {{ supplier.score }})</li>
-                    {% else %}
-                    <li>No suppliers found</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h3>Supplier Sentence Transformer Results</h3>
-                <ul>
-                    {% for supplier in result.get('sentence_results', []) %}
-                    <li>{{ supplier.item }} (Score: {{ supplier.score }})</li>
-                    {% else %}
-                    <li>No suppliers found</li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-
-        <!-- Remit-To Address Results -->
-        <div class="row mt-4">
-            <div class="col-md-4">
-                <h3>Remit-To Address spaCy Results</h3>
-                <ul>
-                    {% for address in result.get('address_spacy_results', []) %}
-                    <li>{{ address }}</li>
-                    {% else %}
-                    <li>No addresses found</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h3>Remit-To Address Fuzzy Results</h3>
-                <ul>
-                    {% for address in result.get('address_fuzzy_results', []) %}
-                    <li>{{ address.item }} (Score: {{ address.score }})</li>
-                    {% else %}
-                    <li>No addresses found</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h3>Remit-To Address Sentence Transformer Results</h3>
-                <ul>
-                    {% for address in result.get('address_sentence_results', []) %}
-                    <li>{{ address.item }} (Score: {{ address.score }})</li>
-                    {% else %}
-                    <li>No addresses found</li>
-                    {% endfor %}
-                </ul>
+                {% else %}
+                <p class="text-danger">Document file not found or unavailable for display.</p>
+                {% endif %}
             </div>
         </div>
 
@@ -154,16 +228,6 @@
                 {% endif %}
             </div>
         </div>
-
-        <!-- GPT Feedback Section -->
-        {% if result.get('validated_prediction') %}
-        <div class="feedback mb-4">
-            <div class="feedback-header">GPT Feedback on Prediction</div>
-            <div class="feedback-text">{{ result['validated_prediction'] }}</div>
-        </div>
-        {% else %}
-        <p>No GPT feedback available for this document.</p>
-        {% endif %}
 
         <!-- Logs Section -->
         <div class="card mt-4">
