@@ -75,8 +75,8 @@
                             <th>Filename</th>
                             <th>Aggregated Supplier</th>
                             <th>Predicted Supplier ID</th>
-                            <th>Aggregated Address</th>
-                            <th>Predicted Address Supplier ID</th>
+                            <th>Supplier Address (from Address CSV)</th>
+                            <th>Aggregated Address Prediction</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -86,8 +86,8 @@
                             <td>{{ document.filename }}</td>
                             <td>{{ document.aggregated_supplier }}</td>
                             <td>{{ document.supplier_id }}</td>
+                            <td>{{ document.supplier_address }}</td>
                             <td>{{ document.aggregated_address }}</td>
-                            <td>{{ document.address_supplier_id }}</td>
                             <td>
                                 <a href="{{ url_for('view_document', filename=document.filename) }}" class="btn btn-info btn-sm">View</a>
                                 <form action="{{ url_for('delete_document', filename=document.filename) }}" method="POST" class="d-inline">

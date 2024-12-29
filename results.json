@@ -1,1 +1,182 @@
-{}
+{
+    "8010289-0_EmailBody.pdf": {
+        "ocr_text": "company name\njordan abbott\nabbott anesthesia aprn-crna pc\n1006 saint andrews dr.\nedmond, ok 73025\ndescription quantity unit price  cost\n1216-12202024 385 225.00.  8,662.50\n0.00\n1216 10.\n1217 0630 10.5.\n1218 10\n1219 8\nsubtotal 8,662.50\n140  total  8,662.50\napproved by 4enda lattz\n1\n\n2\n\n3\n\n4\n\nsubject fwd external invoice dec. 16-20 2024\n\nfrom jordan abbott jordan.abbott33  yahoo.com\n\nto invoicesouhealth.com\n\nce\n\nsent from my iphone\n\nbegin forwarded message\n\nfrom latta, rhonda ouh rhonda.lattaouhealth.com\n\ndate december 19, 2024 at 103704 cst\n\nto jordan abbott jordan.abbott33  yahoo.com\n\nsubject re external invoice dec. 16-20 2024\n\napproved\n\nrhonda latta\n\nadministrative services coordinator\n\nou healthdepartment of anesthesiology\n\n920 stanton l. young blvd., wp1140\n\nphone 405-271-4351, ext. 55114\n\ncell phone 405-291-0502\n\nconfidentiality notice this email, including any attachments, contains information from\nthe university of oklahoma college of medicine, which may be confidential or privileged. the\ninformation is intended to be for the use of the individual or entity named above. if you are not the\nintended recipient, be aware that any disclosure, copying, distribution or use of the contents of this\ninformation is prohibited. if you have received this email in error, please notify the sender\nimmediately by reply to sender only message and destroy all electronic and hard copies of the\ncommunication, including attachments.\n\nfrom jordan abbott jordan.abbott33  yahoo.com\n\nsent thursday, december 19, 2024 950 am\n\nto latta, rhonda ouh rhonda.lattaouhealth.com\n\nsubject external invoice dec. 16-20 2024\n\nsent from my iphone\n\n",
+        "aggregated_supplier": "University of oklahoma",
+        "supplier_id": "SUP-002418",
+        "spacy_results": [
+            {
+                "item": "crosslands a and a rent all and sales co",
+                "score": 79.5641541481018
+            },
+            {
+                "item": "we are for good llc",
+                "score": 76.27200484275818
+            },
+            {
+                "item": "keep it local ok llc",
+                "score": 75.71287751197815
+            },
+            {
+                "item": "point of contact ltd",
+                "score": 75.46654343605042
+            },
+            {
+                "item": "ima independent medical associates",
+                "score": 75.0284194946289
+            }
+        ],
+        "fuzzy_results": [
+            {
+                "item": "university of oklahoma",
+                "score": 100
+            },
+            {
+                "item": "jordan abbott",
+                "score": 100
+            },
+            {
+                "item": "state of oklahoma",
+                "score": 82
+            },
+            {
+                "item": "city of oklahoma city",
+                "score": 81
+            },
+            {
+                "item": "e4health",
+                "score": 75
+            }
+        ],
+        "sentence_results": []
+    },
+    "8009938-0_EmailBody.pdf": {
+        "ocr_text": "4 sta  e ss page 1 invoice date customer summary invoice\np 12192024 dal 70103982\npay by terms amount due\n1182025 1 10net30 days 58.76\ninvoice detail\nmake checks payable to staples\nremit to staples, po box 660409, dallas, tx 75266-0409 federal id 04-3390816\nbill to account 365967 ship to account ou ch everett.\nou health sa com the childrens hospital\npo box 248931 1200 everett dr\nattn ap ste 2e01\noklahoma city, ok 73124 oklahoma city, ok 73104\ninvoice num 6019700551, budget ctr 73603\norder 7648028308-000-001 bc desc 73603 pathology lab\norder date 12172024 po num 3a lab admin ofc, 3406\ndeliver to valerie green po desc\nordered by valerie.green2ouhealth.com release attn valerie green\nrel desc\norder line item number description or. budget center uom ship qty unit price extended price\ndart 12 oz\nfoam cup.\n1 418668 1000ct 1 73603 ct 1 36.97 36.97\nkcup gm\nregular\n2 719465 variety 24ct 1 73603 bx 1 21.79 21.79\nfreight 0.00 tax 0.00 sub-total 58.76\ntax  0.0000 total 58.76\n\nsubject external staples invoice file 365967dalp.pdf for ou medical group tp\ncode  365967dalpo81048652\n\nfrom ediinvpc staples.com ediinvpc staples.com\n\nto invoices ouhealth.com\n\nce\n\nplease note this e-mail was sent from a notification-only address which accepts incoming e-mail,\nbut is not monitored for reply. for staples account questions please contact your account\nmanager. this email and any files transmitted with it are confidential and intended solely for the\nuse of the individual or entity to whom they are addressed.\n\n",
+        "aggregated_supplier": "Seattle childrens hospital",
+        "supplier_id": "SUP-002090",
+        "spacy_results": [
+            {
+                "item": "crosslands a and a rent all and sales co",
+                "score": 79.8050582408905
+            },
+            {
+                "item": "keep it local ok llc",
+                "score": 78.59079837799072
+            },
+            {
+                "item": "do not use sup000526 acclarent inc",
+                "score": 76.33243799209595
+            },
+            {
+                "item": "ima independent medical associates",
+                "score": 75.53259134292603
+            }
+        ],
+        "fuzzy_results": [
+            {
+                "item": "seattle childrens hospital",
+                "score": 81
+            },
+            {
+                "item": "cq medical",
+                "score": 80
+            },
+            {
+                "item": "ywca oklahoma city",
+                "score": 78
+            },
+            {
+                "item": "childrens hospital colorado",
+                "score": 78
+            },
+            {
+                "item": "city of oklahoma city",
+                "score": 76
+            }
+        ],
+        "sentence_results": []
+    },
+    "8010378-0_EmailBody.pdf": {
+        "ocr_text": "invoice\na a mn e\n29 healthcare\nto \nou health inc. remit to\naccounts payable\noak gree 73104 amn workforce solutions, llc\nanoma wily, oklanoma p.o. box 744869\natlanta, ga 30374-4869\ncustomer  invoice  invoice date\n103163 282222 12192024\npo number na\ntotal for hours 5,250.00\nplease include your invoice number with your payment.\ntotal for expenses  0.00\nif you have any questions concerning this invoice,\npl il 813-513-9025\n s 0.00\nvms fee  0.00\nee total due 5,250.00\n\n .\nxx. am n timesheet  3340183\npa. week 12082024-12142024\nya a healthcare employee name bartol, amber\nto\nou health inc.\npayable, accounts\n1200 mark everett dr\noklahoma city, ok 73104\ntotal hours 40.00\ntotal expenses paid  0.00\ntotal expenses billed  0.00\nnumber admin\n- depart . nonbill sun tue wed thu . sat\ntime class ments on location comm 1218 mon 129 1210 1211 1212 fri 1213 1214 total\narts\n govt\nregular hours 600a- 600a- 600a- 600a- 600a- 40.00\n230p 230p 230p 230p 230p\n- 030 - 030 - 030 - 030 - 030\nbreak break break break break\n8.00 8.00 8.00 8.00 8.00 total hours\n40.00\n\n .\nxx. am n timesheet  3340338\npa. week 12082024-12142024\nya a healthcare employee name blakley, kristen\nto\nou health inc.\npayable, accounts\n1200 mark everett dr\noklahoma city, ok 73104\ntotal hours 30.00\ntotal expenses paid  0.00\ntotal expenses billed  0.00\nnumber admin\n- depart . nonbill sun tue wed thu . sat\ntime class ments on location comm 1218 mon 129 1210 1211 1212 fri 1213 1214 total\narts\n govt\nregular hours 315p- 830a- 830a- 815a- 815a- 830a- 900p- 30.00\n630p 1200p 200p 200p 200p 200p 945p\n- 000 - 000 - 000 - 000 - 000 - 000 - 000\nbreak break break break break break break\n3.25 3.50 5.50 5.75 5.75 5.50 0.75 total hours\n30.00\n\nsubject external new invoices -282222\n\nfrom chezka buhay chezka.buhayamnhealthcare.com\n\nto invoices ouhealth.com\n\ncc lindsey.lindsay  ouhealth.com\n\ndear valued customer,\n\nplease find attached invoice 282222 . should you have any invoice inquires, questions or need\nadditional assistance please contact the applicable billing department listed below.\n\nplease note remit address located on your invoice for payments.\n\nsincerely,\n\nbilling department\n\nif you are interested in supporting our go green initiative by transitioning from paper checks to\nachwires please reach out to the below\n\namn workforce solutions at rcsbillingamnhealthcare.com\n\ndirect line 813-513-9025  fax 954-827-2206\n\nconfidentiality note this e-mail, and any attachment to it, contains privileged and confidential\ninformation intended only for the use of the individuals or entity named on the e-mail. if the\nreader of this e-mail is not the intended recipient, or the employee or agent responsible for\ndelivering it to the intended recipient, you are hereby notified that reading this e-mail is strictly\nprohibited. if you have received this e-mail in error, please immediately return it to the sender and\ndelete it from your system. thank you.\n\n",
+        "aggregated_supplier": "Amn workforce solutions llc",
+        "supplier_id": "SUP-003593",
+        "spacy_results": [
+            {
+                "item": "crosslands a and a rent all and sales co",
+                "score": 80.99782466888428
+            },
+            {
+                "item": "keep it local ok llc",
+                "score": 77.59626507759094
+            },
+            {
+                "item": "we are for good llc",
+                "score": 76.79774761199951
+            },
+            {
+                "item": "n line parking lot services",
+                "score": 75.58770775794983
+            },
+            {
+                "item": "do not use sup000526 acclarent inc",
+                "score": 75.1806378364563
+            }
+        ],
+        "fuzzy_results": [
+            {
+                "item": "amn workforce solutions llc",
+                "score": 96
+            },
+            {
+                "item": "true solutions llc",
+                "score": 89
+            },
+            {
+                "item": "bc solutions llc",
+                "score": 88
+            },
+            {
+                "item": "rbs solutions llc",
+                "score": 82
+            },
+            {
+                "item": "fuse3 solutions llc",
+                "score": 79
+            }
+        ],
+        "sentence_results": []
+    },
+    "8009899-0_EmailBody.pdf": {
+        "ocr_text": "4 st a  e ss page 1 invoice date customer summary invoice\np 12192024 dal 70103982\npay by terms amount due\n1182025 1 10net30 days 467.20\ninvoice detail\nmake checks payable to staples\nremit to staples, po box 660409, dallas, tx 75266-0409 federal id 04-3390816\nbill to account 365967 ship to account child urology\nou health sa com childrens urology\npo box 248931 1200 n childrens ave\nattn ap ste 7d\noklahoma city, ok 73124 oklahoma city, ok 73104\ninvoice num 6019700548 budget ctr 30950\norder 7648000145-000-001 bc desc childrens urology clinic\norder date 12172024 po num\ndeliver to amber lauzon po desc\nordered by amber.lauzonouhealth.com release\nrel desc\norder line item number description or. budget center uom ship qty unit price extended price\ndexley blkmsh\ntskchr w\n24398921 headrst 1 30950 ea 1 183.30 183.30\ncandy dum\ndum pop.\n7 899300 assorted fla 1 30950 pk 1 31.99 31.99\nhandling fee\n2452744 non taxable 1 30950 ea 1 9.99 9.99\nstaples std\nsheet prot-\n5 486330 200ct 1 30950 bx 1 12.00 12.00\n60 inch media\n1 24568310 fireplace 1 30950 ea 1 130.29 130.29\nbic roundstic.\n2 442901 bp med blk 60 2 30950 pk 2 5.08 10.16\ncoffeemate\n10 712587 hazelnut 150z 2 30950 ea 2 8.19 16.38\ntable\n4 24599358 ashwood 1 30950 ea 1 55.39 55.39\nbic soft feel\nret bp md blk\n3 463828 12 1 30950 dz 1 4.85 4.85\n2 pocket port\n907693 lt blue 10pk 5 30950 pk 5 2.57 12.85\nfreight 0.00 tax 0.00 sub-total 467.20\ntax  0.0000 total 467.20\n\nsubject external staples invoice file 365967dalp.pdf for ou medical group tp\ncode  365967dalpo81048652\n\nfrom ediinvpc staples.com ediinvpc staples.com\n\nto invoices ouhealth.com\n\nce\n\nplease note this e-mail was sent from a notification-only address which accepts incoming e-mail,\nbut is not monitored for reply. for staples account questions please contact your account\nmanager. this email and any files transmitted with it are confidential and intended solely for the\nuse of the individual or entity to whom they are addressed.\n\n",
+        "aggregated_supplier": "City of oklahoma city",
+        "supplier_id": "SUP-000680",
+        "spacy_results": [
+            {
+                "item": "crosslands a and a rent all and sales co",
+                "score": 75.19250512123108
+            }
+        ],
+        "fuzzy_results": [
+            {
+                "item": "city of oklahoma city",
+                "score": 76
+            },
+            {
+                "item": "state of oklahoma",
+                "score": 76
+            },
+            {
+                "item": "precheck",
+                "score": 75
+            },
+            {
+                "item": "ameripath oklahoma city",
+                "score": 74
+            },
+            {
+                "item": "healthisac inc",
+                "score": 71
+            }
+        ],
+        "sentence_results": []
+    }
+}
