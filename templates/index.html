@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container my-4">
+        <h1>Document Management</h1>
+
+        <!-- Upload Section -->
+        <div class="card my-4">
+            <div class="card-header">
+                <h2>Upload Files</h2>
+            </div>
+            <div class="card-body">
+                <form action="{{ url_for('upload_files') }}" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="supplier_file">Upload Supplier CSV:</label>
+                        <input type="file" class="form-control" id="supplier_file" name="supplier_file" accept=".csv">
+                    </div>
+                    <div class="form-group">
+                        <label for="address_file">Upload Address CSV:</label>
+                        <input type="file" class="form-control" id="address_file" name="address_file" accept=".csv">
+                    </div>
+                    <div class="form-group">
+                        <label for="documents">Upload Documents (PDF/Images):</label>
+                        <input type="file" class="form-control" id="documents" name="documents[]" accept=".pdf,.png,.jpg,.jpeg" multiple>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Upload Files</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Uploaded Files Section -->
+        <div class="card my-4">
+            <div class="card-header">
+                <h2>Uploaded Files</h2>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong>Supplier CSV:</strong> {{ uploaded_supplier_file }}
+                        {% if uploaded_supplier_file != "No file uploaded" %}
+                        <a href="{{ url_for('view_supplier_csv') }}" class="btn btn-info btn-sm ml-2">View</a>
+                        <form action="{{ url_for('delete_supplier_csv') }}" method="POST" class="d-inline">
+                            <button type="submit" class="btn btn-danger btn-sm ml-3">Delete</button>
+                        </form>
+                        {% endif %}
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Address CSV:</strong> {{ uploaded_address_file }}
+                        {% if uploaded_address_file != "No file uploaded" %}
+                        <a href="{{ url_for('view_address_csv') }}" class="btn btn-info btn-sm ml-2">View</a>
+                        <form action="{{ url_for('delete_address_csv') }}" method="POST" class="d-inline">
+                            <button type="submit" class="btn btn-danger btn-sm ml-3">Delete</button>
+                        </form>
+                        {% endif %}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Scanned Documents Section -->
+        <div class="card my-4">
+            <div class="card-header">
+                <h2>Scanned Documents</h2>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Filename</th>
+                            <th>Aggregated Supplier</th>
+                            <th>Supplier ID</th>
+                            <th>Aggregated Address</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for document in document_summaries if document.has_results %}
+                        <tr>
+                            <td>{{ document.filename }}</td>
+                            <td>{{ document.aggregated_supplier }}</td>
+                            <td>{{ document.supplier_id }}</td>
+                            <td>{{ document.aggregated_address }}</td>
+                            <td>
+                                <a href="{{ url_for('view_document', filename=document.filename) }}" class="btn btn-info btn-sm">View</a>
+                                <form action="{{ url_for('delete_document', filename=document.filename) }}" method="POST" class="d-inline">
+                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td colspan="5">No documents have results yet.</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Predict Suppliers Button -->
+        <div class="text-center my-4">
+            <form action="{{ url_for('predict_suppliers') }}" method="POST">
+                <button type="submit" class="btn btn-warning">Predict Suppliers</button>
+            </form>
+        </div>
+
+        <!-- Predicted Suppliers Section -->
+        {% if predictions %}
+        <div class="card my-4">
+            <div class="card-header">
+                <h2>Predicted Suppliers</h2>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    {% for filename, prediction in predictions.items() %}
+                    <li class="list-group-item">
+                        <strong>{{ filename }}:</strong> {{ prediction }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Unscanned Documents Section -->
+        <div class="card my-4">
+            <div class="card-header">
+                <h2>Unscanned Documents</h2>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    {% for document in document_summaries if not document.has_results %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{ document.filename }}
+                        <form action="{{ url_for('delete_document', filename=document.filename) }}" method="POST" class="d-inline">
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </li>
+                    {% else %}
+                    <li>No unscanned documents found.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <!-- Scan All Button -->
+        <div class="text-center my-4">
+            <form action="{{ url_for('scan_documents') }}" method="POST">
+                <button type="submit" class="btn btn-success">Scan All Documents</button>
+            </form>
+        </div>
+
+        <!-- Delete All Documents Button -->
+        <div class="text-center my-4">
+            <form action="{{ url_for('delete_all') }}" method="POST">
+                <button type="submit" class="btn btn-danger">Delete All Documents</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

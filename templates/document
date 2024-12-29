@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document OCR</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container my-5">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="mb-4">Document: {{ filename }}</h1>
+
+            <!-- Render the document -->
+            <div class="border p-3 bg-light mb-4">
+                {% if filename.endswith(".png") or filename.endswith(".jpg") or filename.endswith(".jpeg") %}
+                <img src="{{ url_for('static', filename='documents/' ~ filename) }}" class="img-fluid" alt="Document Image">
+                {% elif filename.endswith(".pdf") %}
+                <iframe src="{{ url_for('static', filename='documents/' ~ filename) }}" width="100%" height="600px"></iframe>
+                {% else %}
+                <p class="text-danger">Cannot preview this file type. Please download it directly.</p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h2>OCR Output</h2>
+            <pre class="bg-light p-3">{{ ocr_text }}</pre>
+        </div>
+    </div>
+    <a href="/" class="btn btn-primary mt-4">Back to Home</a>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

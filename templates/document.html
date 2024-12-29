@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        .feedback {
+            background-color: #f8f9fa;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .feedback-header {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .feedback-text {
+            white-space: pre-wrap; /* Ensures the text is wrapped properly */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Document Details: {{ filename }}</h1>
+
+        <div class="mb-4">
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Overview</a>
+        </div>
+
+        <!-- PDF Viewer -->
+        <div class="card mb-4">
+            <div class="card-header bg-info text-white">
+                Document Viewer
+            </div>
+            <div class="card-body">
+                <iframe 
+                    src="{{ url_for('static', filename='documents/' ~ filename) }}" 
+                    width="100%" 
+                    height="600px" 
+                    style="border: none;">
+                </iframe>
+                <p class="text-muted mt-2">
+                    If the document doesn't display, you can <a href="{{ url_for('static', filename='documents/' ~ filename) }}" target="_blank">download it here</a>.
+                </p>
+            </div>
+        </div>
+
+        <!-- Aggregated Supplier -->
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                Aggregated Supplier
+            </div>
+            <div class="card-body">
+                <p class="card-text">{{ result.get('aggregated_supplier', 'No result') }}</p>
+            </div>
+        </div>
+
+        <!-- Aggregated Remit-To Address -->
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">
+                Aggregated Remit-To Address
+            </div>
+            <div class="card-body">
+                <p class="card-text">{{ result.get('aggregated_address', 'No result') }}</p>
+            </div>
+        </div>
+
+        <!-- Supplier Results -->
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Supplier spaCy Results</h3>
+                <ul>
+                    {% for supplier in result.get('spacy_results', []) %}
+                    <li>{{ supplier }}</li>
+                    {% else %}
+                    <li>No suppliers found</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3>Supplier Fuzzy Results</h3>
+                <ul>
+                    {% for supplier in result.get('fuzzy_results', []) %}
+                    <li>{{ supplier.item }} (Score: {{ supplier.score }})</li>
+                    {% else %}
+                    <li>No suppliers found</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <!-- Remit-To Address Results -->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h3>Remit-To Address spaCy Results</h3>
+                <ul>
+                    {% for address in result.get('spacy_results', []) %}
+                    <li>{{ address }}</li>
+                    {% else %}
+                    <li>No addresses found</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3>Remit-To Address Fuzzy Results</h3>
+                <ul>
+                    {% for address in result.get('fuzzy_results', []) %}
+                    <li>{{ address.item }} (Score: {{ address.score }})</li>
+                    {% else %}
+                    <li>No addresses found</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <!-- OCR Text -->
+        <div class="card mb-4">
+            <div class="card-header">
+                OCR Text (Highlighted)
+            </div>
+            <div class="card-body">
+                {% if ocr_text %}
+                <pre>{{ ocr_text|safe }}</pre>
+                {% else %}
+                <p>No OCR text found.</p>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- GPT Feedback Section -->
+        {% if result.get('validated_prediction') %}
+        <div class="feedback mb-4">
+            <div class="feedback-header">GPT Feedback on Prediction</div>
+            <div class="feedback-text">{{ result['validated_prediction'] }}</div>
+        </div>
+        {% else %}
+        <p>No GPT feedback available for this document.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
