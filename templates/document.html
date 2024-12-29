@@ -33,6 +33,28 @@
             <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Overview</a>
         </div>
 
+        <!-- Aggregated Supplier -->
+<div class="card mb-4">
+    <div class="card-header bg-primary text-white">
+        Aggregated Supplier
+    </div>
+
+            <!-- Aggregated Remit-To Address -->
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">
+                Aggregated Remit-To Address
+            </div>
+            <div class="card-body">
+                <p class="card-text">{{ result.get('aggregated_address', 'No result') }}</p>
+            </div>
+        </div>
+
+    <div class="card-body">
+        <p><strong>Supplier Name:</strong> {{ result.get('aggregated_supplier', 'No result') }}</p>
+        <p><strong>Supplier ID:</strong> {{ result.get('supplier_id', 'No result') }}</p>
+    </div>
+</div>
+
         <!-- PDF Viewer -->
         <div class="card mb-4">
             <div class="card-header bg-info text-white">
@@ -51,29 +73,9 @@
             </div>
         </div>
 
-        <!-- Aggregated Supplier -->
-        <div class="card mb-4">
-            <div class="card-header bg-primary text-white">
-                Aggregated Supplier
-            </div>
-            <div class="card-body">
-                <p class="card-text">{{ result.get('aggregated_supplier', 'No result') }}</p>
-            </div>
-        </div>
-
-        <!-- Aggregated Remit-To Address -->
-        <div class="card mb-4">
-            <div class="card-header bg-success text-white">
-                Aggregated Remit-To Address
-            </div>
-            <div class="card-body">
-                <p class="card-text">{{ result.get('aggregated_address', 'No result') }}</p>
-            </div>
-        </div>
-
         <!-- Supplier Results -->
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <h3>Supplier spaCy Results</h3>
                 <ul>
                     {% for supplier in result.get('spacy_results', []) %}
@@ -83,10 +85,20 @@
                     {% endfor %}
                 </ul>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <h3>Supplier Fuzzy Results</h3>
                 <ul>
                     {% for supplier in result.get('fuzzy_results', []) %}
+                    <li>{{ supplier.item }} (Score: {{ supplier.score }})</li>
+                    {% else %}
+                    <li>No suppliers found</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>Supplier Sentence Transformer Results</h3>
+                <ul>
+                    {% for supplier in result.get('sentence_results', []) %}
                     <li>{{ supplier.item }} (Score: {{ supplier.score }})</li>
                     {% else %}
                     <li>No suppliers found</li>
@@ -97,7 +109,7 @@
 
         <!-- Remit-To Address Results -->
         <div class="row mt-4">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <h3>Remit-To Address spaCy Results</h3>
                 <ul>
                     {% for address in result.get('spacy_results', []) %}
@@ -107,10 +119,20 @@
                     {% endfor %}
                 </ul>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <h3>Remit-To Address Fuzzy Results</h3>
                 <ul>
                     {% for address in result.get('fuzzy_results', []) %}
+                    <li>{{ address.item }} (Score: {{ address.score }})</li>
+                    {% else %}
+                    <li>No addresses found</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>Remit-To Address Sentence Transformer Results</h3>
+                <ul>
+                    {% for address in result.get('sentence_results', []) %}
                     <li>{{ address.item }} (Score: {{ address.score }})</li>
                     {% else %}
                     <li>No addresses found</li>
@@ -142,6 +164,24 @@
         {% else %}
         <p>No GPT feedback available for this document.</p>
         {% endif %}
+
+        <!-- Logs Section -->
+        <div class="card mt-4">
+            <div class="card-header bg-dark text-white">
+                Logs
+            </div>
+            <div class="card-body">
+                {% if logs %}
+                <ul class="list-group">
+                    {% for log in logs %}
+                    <li class="list-group-item">{{ log }}</li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p class="text-muted">No logs available.</p>
+                {% endif %}
+            </div>
+        </div>
     </div>
 </body>
 </html>

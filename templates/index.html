@@ -74,8 +74,9 @@
                         <tr>
                             <th>Filename</th>
                             <th>Aggregated Supplier</th>
-                            <th>Supplier ID</th>
+                            <th>Predicted Supplier ID</th>
                             <th>Aggregated Address</th>
+                            <th>Predicted Address Supplier ID</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -86,6 +87,7 @@
                             <td>{{ document.aggregated_supplier }}</td>
                             <td>{{ document.supplier_id }}</td>
                             <td>{{ document.aggregated_address }}</td>
+                            <td>{{ document.address_supplier_id }}</td>
                             <td>
                                 <a href="{{ url_for('view_document', filename=document.filename) }}" class="btn btn-info btn-sm">View</a>
                                 <form action="{{ url_for('delete_document', filename=document.filename) }}" method="POST" class="d-inline">
@@ -95,7 +97,7 @@
                         </tr>
                         {% else %}
                         <tr>
-                            <td colspan="5">No documents have results yet.</td>
+                            <td colspan="6">No documents have results yet.</td>
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -109,24 +111,6 @@
                 <button type="submit" class="btn btn-warning">Predict Suppliers</button>
             </form>
         </div>
-
-        <!-- Predicted Suppliers Section -->
-        {% if predictions %}
-        <div class="card my-4">
-            <div class="card-header">
-                <h2>Predicted Suppliers</h2>
-            </div>
-            <div class="card-body">
-                <ul class="list-group">
-                    {% for filename, prediction in predictions.items() %}
-                    <li class="list-group-item">
-                        <strong>{{ filename }}:</strong> {{ prediction }}
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-        {% endif %}
 
         <!-- Unscanned Documents Section -->
         <div class="card my-4">
