@@ -10,6 +10,7 @@ from sentence_transformers import SentenceTransformer, util
 import spacy
 from fuzzywuzzy import fuzz, process
 import openai
+import re
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -128,10 +129,10 @@ def sentence_transformer_match(text, items, similarity_threshold=0.75):
         log(f"Error during SentenceTransformer matching: {e}", level="ERROR")
         return []
 
-def spacy_match(text, items, similarity_threshold=0.5):
+def spacy_match(text, items, similarity_threshold=0.75):
     """
     Matches text against items using spaCy similarity.
-    Ensures valid inputs and handles edge cases for empty vectors.
+    Processes items in a batch for efficiency and handles edge cases.
     """
     if not items:
         log("No items provided for spaCy matching.", level="WARNING")
@@ -141,14 +142,18 @@ def spacy_match(text, items, similarity_threshold=0.5):
         log("Input text is empty or invalid for spaCy similarity.", level="WARNING")
         return []
 
-    results = []
+    # Create the spaCy Doc object for the input text
     doc = nlp(text.lower())
     if doc.vector_norm == 0:
         log("Input text has empty vectors; skipping spaCy similarity.", level="WARNING")
         return []
 
-    for item in items:
-        item_doc = nlp(item.lower())
+    # Preprocess and batch-create spaCy Doc objects for items
+    preprocessed_items = [item.lower() for item in items]
+    item_docs = list(nlp.pipe(preprocessed_items))
+
+    results = []
+    for item, item_doc in zip(preprocessed_items, item_docs):
         if item_doc.vector_norm == 0:
             log(f"Skipping item '{item}' due to empty vectors.", level="WARNING")
             continue
@@ -157,38 +162,42 @@ def spacy_match(text, items, similarity_threshold=0.5):
         if similarity >= similarity_threshold:
             results.append({"item": item, "score": similarity * 100})
 
+    # Sort results by score in descending order
+    results = sorted(results, key=lambda x: x["score"], reverse=True)
+
+    if not results:
+        log("No spaCy matches exceeded the similarity threshold.", level="INFO")
+
     log(f"spaCy match results: {results}")
-    return sorted(results, key=lambda x: x["score"], reverse=True)
+    return results
+
+def sanitize_text(text):
+    """
+    Converts text to lowercase and removes special characters except currency symbols.
+    """
+    return re.sub(r'[^a-zA-Z0-9\s$€£]', '', text.lower())
 
 def load_suppliers():
     filepath = os.path.join(UPLOAD_FOLDER_SUPPLIERS, 'suppliers.csv')
     if not os.path.exists(filepath):
-        log("Supplier CSV not found.", level="WARNING")
         return []
-    try:
-        with open(filepath, mode='r') as file:
-            reader = csv.DictReader(file)
-            suppliers = [{"id": row["Supplier_ID"], "name": row["Supplier_Name"]} for row in reader]
-            log(f"Loaded {len(suppliers)} suppliers from CSV.")
-            return suppliers
-    except Exception as e:
-        log(f"Error loading suppliers: {e}", level="ERROR")
-        return []
+    with open(filepath, mode='r') as file:
+        reader = csv.DictReader(file)
+        return [
+            {
+                "id": row["Supplier_ID"],
+                "name": sanitize_text(row["Supplier_Name"])
+            }
+            for row in reader
+        ]
 
 def load_addresses():
     filepath = os.path.join(UPLOAD_FOLDER_ADDRESSES, 'addresses.csv')
     if not os.path.exists(filepath):
-        log("Address CSV not found.", level="WARNING")
         return []
-    try:
-        with open(filepath, mode='r') as file:
-            reader = csv.DictReader(file)
-            addresses = [row["Formatted_Address"] for row in reader]
-            log(f"Loaded {len(addresses)} addresses from CSV.")
-            return addresses
-    except Exception as e:
-        log(f"Error loading addresses: {e}", level="ERROR")
-        return []
+    with open(filepath, mode='r') as file:
+        reader = csv.DictReader(file)
+        return [sanitize_text(row["Formatted_Address"]) for row in reader]
 
 def get_aggregated_supplier(spacy_results, fuzzy_results, sentence_results, suppliers):
     """
@@ -220,7 +229,7 @@ def get_aggregated_supplier(spacy_results, fuzzy_results, sentence_results, supp
 def get_aggregated_address(spacy_results, fuzzy_results, sentence_results, addresses):
     """
     Aggregates results from spaCy, fuzzy matching, and SentenceTransformer.
-    Returns the best-matched address and its corresponding entry in the CSV.
+    Returns the best-matched address.
     """
     all_results = spacy_results + fuzzy_results + sentence_results
     if not all_results:
@@ -233,8 +242,10 @@ def get_aggregated_address(spacy_results, fuzzy_results, sentence_results, addre
         score = res.get("score", 0)
         scores[item] = scores.get(item, 0) + score
 
-    # Return the best match
-    return max(scores, key=scores.get) if scores else "No result"
+    # Find the best match
+    best_address = max(scores, key=scores.get) if scores else "No result"
+
+    return best_address
 
 @app.route('/')
 def index():
@@ -345,37 +356,47 @@ def scan_documents():
 
     for filename in document_files:
         file_path = os.path.join(STATIC_FOLDER_DOCUMENTS, filename)
+        
+        log(f"Starting OCR for file: {filename}")
         ocr_text = extract_text_from_pdf(file_path)
+        log(f"OCR completed for {filename}: {ocr_text[:100]}...")  # Log the first 100 characters of OCR
 
-        # Perform matching
+        # Perform matching for suppliers
+        log(f"Starting supplier matching for {filename}")
         supplier_spacy_results = spacy_match(ocr_text, supplier_names)
         supplier_fuzzy_results = fuzzy_match(ocr_text, supplier_names)
         supplier_sentence_results = sentence_transformer_match(ocr_text, supplier_names)
 
+        # Perform matching for addresses
+        log(f"Starting address matching for {filename}")
         address_spacy_results = spacy_match(ocr_text, addresses)
         address_fuzzy_results = fuzzy_match(ocr_text, addresses)
         address_sentence_results = sentence_transformer_match(ocr_text, addresses)
 
-        # Aggregated results
+        # Aggregate supplier results
         aggregated_supplier, supplier_id = get_aggregated_supplier(
             supplier_spacy_results, supplier_fuzzy_results, supplier_sentence_results, suppliers
         )
-        aggregated_address, address_supplier_id = get_aggregated_supplier(
-            address_spacy_results, address_fuzzy_results, address_sentence_results, suppliers
+
+        # Aggregate address results
+        aggregated_address = get_aggregated_address(
+            address_spacy_results, address_fuzzy_results, address_sentence_results, addresses
         )
 
         # Save results
+        log(f"Saving results for {filename}")
         document_results[filename] = {
             "ocr_text": ocr_text,
             "aggregated_supplier": aggregated_supplier,
             "supplier_id": supplier_id,
             "aggregated_address": aggregated_address,
-            "address_supplier_id": address_supplier_id,
             "spacy_results": supplier_spacy_results,
             "fuzzy_results": supplier_fuzzy_results,
-            "sentence_results": supplier_sentence_results
+            "sentence_results": supplier_sentence_results,
         }
+
     save_results()
+    log("Document scanning and processing completed.")
     return redirect(url_for('index'))
 
 @app.route('/view_supplier_csv')

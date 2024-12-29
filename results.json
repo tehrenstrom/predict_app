@@ -1,1 +1,734 @@
-{}
+{
+    "8000377-3_EmailBody.pdf": {
+        "ocr_text": "AX suraicat Packing Slip\nRevolutionizing Healing. Changing Lives # INV-032076\nAcera Surgical Inc\nAcera Surgical Inc\n1650 Des Peres Rd\nSt. Louis, Missouri 63131\n(844) 879-2237\nBill To\nAttn: Accounts Payable\nOU Health University of Oklahoma Medical Center\nOU Medical Center\nP.O Box 248931\noganema City, OK 73124 Invoice Date : 12/20/2024\nInvoices@ouhealth.com Sales Order: S0-32456\nShip To weston PO-00569599\nAttn: OU MEDICAL CENTER Number :\nOU Health University of Oklahoma Processing : Acera Processing\nMedical Center ,\n700 NE 13th Street Shipping Method : FedEx 2Day\nOklahoma City, OK . 73104\nU.S.A Ship by: 12/18/2024\n405-271-3273 ;\nInvoices@ouhealth.com No Charge Eval : No\na Batch .\n# Item & Description Revarane\u201d Expiry Date Qty\n1 RWM1-2X2 Restrata\u00ae Wound Matrix - 5.0 cm x 5.0 cm 107498 08/06/2026 1\nSKU : RWM1-2X2 pcs\n107498-0034\nQuality Assurance Check\nInitials\n| [Shipping Address\n| [Shipping Method\nFF expiraion Date\n\n2\n\nSubject: [EXTERNAL] RE: PO-00569599 Has been issued to your organization\n\nFrom: Orders [Acera Surgical] <orders@ acera-surgical.com>\n\nTo: oum.scspurchasing @ ouhealth.com, Invoices @ouhealth.com\n\nCc: hannar @acera-surgical.com\n\nHello,\n\nThis order will be shipped today, tracking: 770889251465.\n\nThank you,\n\nMina Habibollah\n\nSales Support Specialist\n\nAcera Surgical, Inc.\n\n1650 Des Peres Rd, Suite 120\n\nSaint Louis, MO 63131\n\nCustomer Service: (844) 879-2237\n\nMobile: (314) 443-8085\n\nWeb: www.acera-surgical.com\n\nFrom: OU Health Workday <oumedicine@myworkday.com>\n\nSent: Wednesday, December 18, 2024 2:40 PM\n\nTo: Orders [Acera Surgical] <orders @acera-surgical.com>\n\nSubject: PO-00569599 Has been issued to your organization\n\nEXTERNAL MESSAGE - Originated Outside Organization\n\nOU Medicine has issued a purchase order to your organization. Please acknowledge Purchase\nOrder at: oum.scspurchasing@oumedicine.com As a reminder, all invoices submitted for payment\nMUST include a purchase order.\n\nBusiness Process: Purchase Order: PO-00569599, Supplier: Acera Surgical Inc, Company: OU\nMedical Center, Date: 12/18/2024\n\nSubject: Purchase Order: PO-00569599, Supplier: Acera Surgical Inc, Company: OU Medical\nCenter, Date: 12/18/2024\n\nClick here to view the notification details.\n\nThis email was intended for orders @acera-surgical.com\n\nThis email (including any attachments) may contain information that is confidential. If you received\nthis email in error: please notify the sender so our records can be corrected, delete and purge it\nfrom your email system, and do not save or share the misdirected information.\n\n",
+        "aggregated_supplier": "University of oklahoma",
+        "supplier_id": "SUP-002418",
+        "aggregated_address": "po box 53696nirvine ca 92619nunited states of america",
+        "spacy_results": [
+            {
+                "item": "crosslands a and a rent all and sales co",
+                "score": 76.12277865409851
+            },
+            {
+                "item": "do not use sup000526  acclarent inc",
+                "score": 76.0570764541626
+            },
+            {
+                "item": "3m health information systems",
+                "score": 75.6294846534729
+            }
+        ],
+        "fuzzy_results": [
+            {
+                "item": "university of oklahoma",
+                "score": 100
+            },
+            {
+                "item": "acera surgical inc",
+                "score": 100
+            },
+            {
+                "item": "cura surgical inc",
+                "score": 94
+            },
+            {
+                "item": "university of iowa",
+                "score": 89
+            },
+            {
+                "item": "cs surgical inc",
+                "score": 87
+            }
+        ],
+        "sentence_results": []
+    },
+    "7944774-3_EmailBody.pdf": {
+        "ocr_text": "Se INVOICE 8003688408 acide a\nCardinal Health 414, LLC\nNuclear Pharmacy Services\n\u00b0 P.O.BOX 70609\nCardinalHealth Chicago, IL 60673-0609\nPage 1 of 3\nPAYER SHIP TO BILL TO\ni Payer # 4000016258 Ship-to # 2100058440 Bill-to # 3000050242\nOU MEDICAL CENTER OU MEDICAL CENTER Attention: ACCTS PAYABLE\n700 NE 13TH ST eqns adi OU MEDICAL CENTER\nOKLAHOMA CITY, OK oe aE esi a 700 NE 13TH ST\n73104 OKLAHOMA CITY, OK 73104\nOKLAHOMA CITY, OK ;\n73104-5404\n2100058440 |OU MEDICAL CENTER SURGERY CENTER | ss 7/2024-11/23/2024 | 12/28/2024\nPlease DO NOT change your payment \u2018remit to\u2019 address without prior written Notification from Cardinal Health. For assistance, please contact your local pharmacy or\nCardinal Health's Central Billing department at: 1-866-219-4427 or email Nuclear-Invoicing-Inquiries@cardinalhealth.com. Please remit your payment advice to\nremits@cardinalhealth.com\n2,500.00 uCi | Tc-99m Tilmanocept UD syringe 102967}019 0.00) 0.00)\n5.00 ea Lymphoseek Study Dose 103931}103 733.70 3,668.50\n3.00 ea Weekday Delivery 1 199001 28.77) 86.31\nFuel Surcharge 199001 0.00 0.00\nSub Total 3,754.81\nTe 0.00]\ngh) Gs Gpdese thence snes nayeghedecneessny\nCash Total $ 3,754.81 USD\nExcept for sales in CT, MA, ME, NY we impose a surcharge of 3% on the 3% Credit Card Surcharge $ 110.05 USD\ntransaction amount on all credit card products, which is not greater than Total including 3% surcharge $ 3,864.86 USD\nour cost of acceptance.We do not accept debit cards.\n_ Customer payment Due Date is displayed above. A service charge of 1.5% (or the maximum rate permitted by law, if less) applies on any amount not paid when due. S\nIf this invoice reflects any discounted prices, credits or rebates or if price reductions are subsequently earned and paid with respect to the products or services described herein, then 8\nfederal law may require disclosure of the price reduction on your claim or cost reports to Medicare or Medicaid Reimbursement under 42 U.S.C. 1320(a)-7b(b)(3)(A). =\nConfidential g\n3\nEa\n\nBense eee\niS ag Itemized Billing List for period ending 11/23/2024 kee\nPage 2 of 3\nShip To #: 2100058440\nShip To Name: OU MEDICAL CENTER SURGERY CENTER\nNUCLEAR MEDICINE\nOrders without PO #\n11/19/24 iLymphoseek Study Dose 103931 103-Fees ar ae 733.70, Per Physician\u2019\n190404 |11/19/24 \u2018To-99m Tilmanocept UD syringe | 102967'019-Breast Lymph Scint. | 125.00uCi 0.00; |kellogg\n: i i i fi j\n190406 , 1/19/24 Tc-99m Tilmanocept UD syringe | 102967 019-Breast Lymph Scint. | 125.00uCi | 0.00: \u2018Kellogg\n190408 Hangie4 \u2018Te-99m Tilmanocept UD syringe | 102967 |019-Breast Lymph Scint. | 125.00 uCi | 0.00, \u2018kellogg\n190409 , 1/19/24 'Tc-99m Tilmanocept UD syringe | 102967 019-Breast Lymph Scint. | 125.00uCi | 0.00) ikellogg\neee 'Lymphoseek Study Dose | 103931 103-Fees | 1.00, ea ' 733.70, \u2018Per Physician\u2019\n\\ 4/20/24 |Lymphoseek Study Dose | 103931 /103-Fees | 1.00ea 733.70, Per Physician\u2019\n190753 i 4/20/24 'Tc-99m Tilmanocept UD syringe 102967 019-Breast Lymph Scint. | 125.00 uci 0.00, \u2018balderas\n190755 | 1/20/24 To-99m Tilmanocept UD syringe i 102967 019-Breast Lymph Scint. | 125.00. uCi 0.00) \u2018balderas\n190757 (11/20/24 Tc-99m Tilmanocept UD syringe _ 102967 019-Breast Lymph Scint. | 125.00 uCi ] 0.00; balderas\n190760 vanes [Te-gem Tilmanocept UD syringe i bell 9-Breast Lymph Scint. | 125.00uCi 0.00; ibalderas\n| | | | | | |\n190762 |i Veo/ea 'Tc-99m Tilmanocept UD syringe 102967 019-Breast Lymph Scint. | 125.00,uCi 0.00 -schutt\n490763 (11/20/24 Tc-99m Tilmanocept UD syringe | 102967 019-Breast Lymph Scint. 125.00uCi 0.00) \u2018schutt\n190765 1 1/20/24 |Tc-99m Tilmanocept UD syringe | 102967 019-Breast Lymph Scint. | 125.00 uCi 0.00, ischutt\n190767 |11/20/24 \u2018Tc-99m Tilmanocept UD syringe | 402967 019-Breast Lymph Scint. | 125.00uCi 0.00) |schutt\n11/21/24 |Lymphoseek Study Dose | 103931 103-Fees | 1.00,.ea | 733.70 [Per Physician\u2019\ni | | | | | |\n(11/21/24 |Lymphoseek Study Dose | 103931) 103-Fees | 1.00ea | 733.70) iPer Physician\u2019\n191210 j11venes 'Tc-99m Tilmanocept UD syringe | 102967 019-Breast Lymph Scint. 125.00uCi 0.00) \u2018swindler, krys\n191212 I 1/21/24 'Tc-99m Tilmanocept UD syringe | 102967 |019-Breast Lymph Scint. | 125.00 uCi | 0.00) (swindler, krys\n191215 1/21/24 'Tc-99m Tilmanocept UD syringe | 102967 019-Breast Lymph Scint. | 125.00uCi 0.00: swindler, krys\n191216 | 11/21/24 |Tc-99m Tilmanocept UD syringe 102967 019-Breast Lymph Scint. | 125.00uCi 0.00: |swindler, krys\n191218 l 1/21/24 Tc-99m Tilmanocept UD syringe i 102967 019-Breast Lymph Scint. 125.00 uCi | 0.00; ding, xi\n191221 ee \u2018Te-99m Tilmanocept UD syringe | 102967 019-Breast Lymph Scint. | 125.00uCi 0.00) iding, xi\n191222 i 1/21/24 'To-99m Tilmanocept UD syringe | 102967 019-Breast Lymph Scint. | 125.00.uCi | 0.00) \u2018ding, xi\n191225 |y1/21/24 |Tc-99m Tilmanocept UD syringe | 102967'019-Breast Lymph Scint. | 125.00uCi 0.00, ding, xi\nSales Total for Orders without PO # $ 3,668.50\nTotal Sales $ 3,668.50 USD\nMN Care Tax $ 0.00 USD\nTotal Tax $ 0.00 USD\ninvoice Period Total $ 3,668.50 USD\n=\nAll information included in this invoice is Confidential and may include Protected Health Information (\u201cPHI\u201d). The recipient is responsible for protecting all PHI as required under 8\napplicable federal and state privacy and security laws, including the Health Insurance Portability and Accountability Act (\u201cHIPAA\u201d) and HITECH Act. +\n\u00a9\nPa\n8\n&\n\n\u2014 a INVOICE 8003688408 beats\nDelivery Charges for period ending 11/23/2024\nCardinalHealth\nPage 3 of 3\nRE Ship To #: 2100058440\nShip To Name: OU MEDICAL CENTER SURGERY CENTER\nNUCLEAR MEDICINE\n\nCustomer: OU MEDICAL CENTER\n\n11/19/2024 05:47:16 CT 28.77 0.00/Weekday Delivery 1\n\n11/19/2024 05:47:16 CT 0.00 0.00|Fuel Surcharge\n\n11/20/2024 05:55:03 CT 28.77 0.00|Weekday Delivery 1\n\n11/20/2024 05:55:03 CT 0.00) 0.00|Fuel Surcharge\n\n11/21/2024 05:51:38 CT 28.77 0.00|Weekday Delivery 1\n\n11/21/2024 05:51:38 CT 0.00 0.00|Fuel Surcharge\ng\n2\n8\n\nSubject: invoices\n\nFrom: Lozano, Francisco (OUH) <Francisco.Lozano@ouhealth.com>\nTo: Invoices@ ouhealth.com\n\nCe:\n\nFrancisco Lozano\n\nFrancisco.lozano@ouhealth.com\n\nAccounts Payable Specialist , OU Health\n\nMailing Address: PO BOX 2489311 Oklahoma City, OK, 73124\nPhone: 405-764-8146\n\nPlease direct invoice submissions to:\n\nInvoices @ ouhealth.com\n\nPlease direct payment inquiries to:\n\nAP @ouhealth.com\n\n",
+        "aggregated_supplier": "Cardinal health 414 llc",
+        "supplier_id": "SUP-001163",
+        "aggregated_address": "221 n service rdnsuite dnmoore ok 731604941nunited states of america",
+        "spacy_results": [
+            {
+                "item": "3m health information systems",
+                "score": 75.45103430747986
+            }
+        ],
+        "fuzzy_results": [
+            {
+                "item": "cardinal health 414 llc",
+                "score": 96
+            },
+            {
+                "item": "cardinal health 108 llc",
+                "score": 87
+            },
+            {
+                "item": "cardinal health 110 llc",
+                "score": 87
+            },
+            {
+                "item": "magic services",
+                "score": 86
+            },
+            {
+                "item": "ucsf medical center",
+                "score": 84
+            }
+        ],
+        "sentence_results": []
+    },
+    "7967511-0_EmailBody.pdf": {
+        "ocr_text": "e y\nPurchase Ore Ne\n\nOklahoma Center for Bleeding Disorders Invoice\n\nbrian.wesley@ouhealth.com\n\n1200 CHILDRENS AVE ,RM 7303\n\nOklahoma City, OK 73104\n\nOKD13756 0000018941\nuit | quanrity\nCARETEND CLOUD SERVICES MO 1.00 1,499.00 1,499.00\nCARETEND CONTROLLED SUBSTANCE REPORTING MO 1.00 13.00 13.00\nCARETEND BUSINESS INTELLIGENCE MO 1.00 235.00 235.00\nCARETEND MEDISPAN MO 1.00 143.00 143.00\nCARETEND EPRESCRIBE MO 1.00 468.00 468.00\nCARETEND HL7 INTERFACE MO 1.00 233.00 233.00\nCONTRACT NO. 3803037 MO 1.00 0.00 0.00\nMONTHLY HOSTING FEES MO 1.00 0.00 0.00\n04/01/2024 - 03/31/2025 MO 1.00 0.00 0.00\nElectronic funds transfer (EFT/ACH/Wire) or Check\nSales Tz .\nACH routing # (ABA) 121000248 WellSky aes tx $0.00\nBank account # (DDA) 4000069922 PO Box 204176\nSWIFT code (wire transfer) WFBIUS6S Dallas, TX 75320-4176 Total $2,591.00\nInclude WellSky invoice number(s) in the descriptive field of your electronic funds transfer payment,\nor email Accountsreceivable@WellSky.com to submit your remittance detail\n\nSubject: FW: WellSky Invoice\n\nFrom: Wesley, Brian (OUH) <Brian.Wesley @ ouhealth.com>\n\nTo: Invoices@ouhealth.com\n\nCe:\n\nCC: 76805\n\nBrian Wesley, Pharm.D .\n\nOU Health Pharmacy - Jimmy Everest Center\n\nPharmacy Manager\n\n(405) 271-1047\n\n1200 N. Children\u2019s Ave. Suite 7300\n\nOU Children\u2019s Physician\u2019s Bldg.\n\n7th Floor | Suite 7E\n\nOklahoma City, OK 73104\n\nCONFIDENTIALITY NOTICE: This email, including any attachments, contains information that\nmay be confidential or privileged and is intended for use of the individual or entity named above. If\nyou are not the intended recipient, be aware that any disclosure, copying, distribution, or use of\nthe contents is prohibited. If you have received this email in error, please notify the sender\nimmediately by a \u201creply to sender only\u201d message and destroy all electronic and hard copies of the\nemail and attachments.\n\nFrom: WellSky Billing <Billing@wellsky.com>\n\nSent: Sunday, December 15, 2024 11:38 PM\n\nTo: Wesley, Brian (OUH) <Brian.Wesley @ouhealth.com>\n\nSubject: [EXTERNAL] WellSky Invoice\n\nDear Valued Client,\n\nPlease find attached your invoice number CTR1100057842.\n\nIf you have any questions, please feel free to respond to this email and we will respond as soon as\nwe can.\n\nSincerely,\n\nWellSky Billing\n\n",
+        "aggregated_supplier": "Crosslands a and a rent all and sales co",
+        "supplier_id": "SUP-003112",
+        "aggregated_address": "po box 53696nirvine ca 92619nunited states of america",
+        "spacy_results": [
+            {
+                "item": "crosslands a and a rent all and sales co",
+                "score": 80.14367818832397
+            },
+            {
+                "item": "keep it local ok llc",
+                "score": 78.1827986240387
+            },
+            {
+                "item": "do not use sup000526  acclarent inc",
+                "score": 77.71520018577576
+            },
+            {
+                "item": "we are for good llc",
+                "score": 76.26340985298157
+            }
+        ],
+        "fuzzy_results": [],
+        "sentence_results": []
+    },
+    "7984912-4_EmailBody.pdf": {
+        "ocr_text": "Invoice\nInvoice Number PUES\ncerecore Invoice Date FEE\n1/1926\nOklahoma University Medical Ce Remittance Information:\n700 NE 13th Street CereCore\nOKLAHOMA CITY, OK 73104 MSC 30225\nP.O. Box 41500\nNashville, TN 37241-5000\n| || Faciity io RR 100659 NET30\n1 Clinical Svcs Clinical Services Access E $68,640.00\n2 Custom Services Business Objects 21 Users E $1,347.22\n3 Custom Services COID 16 E $4,330.34\n4 EC Lite Simplified Remote Access E $7,311.42\n5 Help Desk Support Support Calls Level 1 E $1,684.02\n6 Help Desk Support System Admin E $16,840.20\n7 Hosting 1 Web server and 1 DB server E $1,830.60\n8 Hosting Firewall * 2 E $3,969.48\nNetwork and Security Services (TAVM/Network\n9 Hosting Flow) E $67,537.62\n10 Hosting Network - WAN Router Support * 9 E $2,971.09\nImplement Non-Custom\n11 Software Division Services - Pass through Admin Fee 10% E $1,684.02\n12 Network Access EDW Facility Access * 16 E $9,728.00\n13 Network Access EDW Maintenance for eCQM/MU Reporting E $3,909.33\n14 Network Access SA Portal E $1,202.86\n15 Patient Accounting Svcs Patient Accounting System Access E $21.32\n16 WAN Facility Circuits FRO2005699531GIGLumen0205274470 E $2,592.13\n17 WAN Facility Circuits FRO2005699533XCSLumen0205274470 E $2,511.65\n18 WAN Facility Circuits KRGN.741738..ATIAT&T8310004491669 E $2,238.62\n19 WAN Facility Circuits KRGN.741738..ATIAT&T8310013046505 E $4.00\n20 WAN Facility Circuits KRGN.994252..ATIAT&T8310004491669 E $2,238.62\n21. WAN Facility Circuits KRGN.994252..ATIAT&T8310013046505 E $4.00\nInvoice payment is due upon receipt. Payments will be considered past due Subtotal $202,596.54\nafter Due Date and subject to any interest rates or penalties included in the Cumulative Tax $0.00\nMaster Services Agreement. -\nPlease include your invoice number on your remittance.\nTotal A t D 202,596.54\nThank you for choosing Cerecore. We sincerely appreciate your business. otal Amount Due $202,\nPlease call your Client Executive with any questions or comments about our\nperformance or this invoice.\nTax Amount by State\nOKLAHOMA $0.00\nTEXAS $0.00\npage 1\n\npage 2\n\nSubject: [EXTERNAL] OU Medicine Invoices from CereCore\n\nFrom: Sylva Kathy <Kathy.Sylva@CereCore.net>\n\nTo: Invoices@ouhealth.com, Deborah.McCormick@ ouhealth.com, Jennifer.White @ ouhealth.com\nCc: Gwendalynn.Barrow @ouhealth.com, Jennifer.Smith4 @ ouhealth.com,\nMaggie.Werschmidt@CereCore.net, Laurel.Durham@ouhealth.com\n\nHello,\n\nYour December invoices from CereCore are attached. We bill one month in arrears so the invoices\nyou are receiving are for services rendered in November.\n\nThank you for your business and please let me know if you have any questions.\n\nKathy Sylva, MBA\n\nSr. Accountant - Revenue\n\nCereCore\n\nKathy.sylva@ CereCore.net\n\nwww.CereCore.net\n\nThis email and any files transmitted with it may contain PRIVILEGED or CONFIDENTIAL\ninformation and may be read or used only by the intended recipient. If you are not the intended\nrecipient of the email or any of its attachments, please be advised that you have received this\nemail in error and that any use, dissemination, distribution, forwarding, printing, or copying of this\nemail or any attached files is strictly prohibited. If you have received this email in error, please\nimmediately purge it and all attachments and notify the sender by reply email or contact the\nsender at the number above\n\n",
+        "aggregated_supplier": "Cerecore",
+        "supplier_id": "SUP-000674",
+        "aggregated_address": "po box 53696nirvine ca 92619nunited states of america",
+        "spacy_results": [
+            {
+                "item": "crosslands a and a rent all and sales co",
+                "score": 82.6802134513855
+            },
+            {
+                "item": "n line parking lot services",
+                "score": 78.03284525871277
+            },
+            {
+                "item": "3m health information systems",
+                "score": 77.96210050582886
+            },
+            {
+                "item": "we are for good llc",
+                "score": 77.39904522895813
+            },
+            {
+                "item": "do not use sup000526  acclarent inc",
+                "score": 77.20679044723511
+            },
+            {
+                "item": "keep it local ok llc",
+                "score": 76.62041783332825
+            },
+            {
+                "item": "the center for individuals with physical challenges",
+                "score": 75.96877813339233
+            },
+            {
+                "item": "ima  independent medical associates",
+                "score": 75.37074685096741
+            },
+            {
+                "item": "best buy for business",
+                "score": 75.31880736351013
+            },
+            {
+                "item": "central pay services",
+                "score": 75.24213194847107
+            }
+        ],
+        "fuzzy_results": [
+            {
+                "item": "cerecore",
+                "score": 100
+            },
+            {
+                "item": "mfi medical",
+                "score": 82
+            },
+            {
+                "item": "universal medical inc",
+                "score": 81
+            },
+            {
+                "item": "bd medical",
+                "score": 80
+            }
+        ],
+        "sentence_results": []
+    },
+    "7992633-0_EmailBody.pdf": {
+        "ocr_text": "Invoice\n\u2122\n\u2014_\nThe Specimen Management Experts\n12/20/2024 | CINV94705\nBill To\nOU Medicine, Inc-1743\n700 NE 13th St\nOklahoma City, OK 73104-5004\n[dvedae [_RONe [tems [Rep \u2014+\na\nCarrier: RS-| Logistics Services-Return Carrier Charges - UPS -] LGCA-PT-121424-1743 1/EA $0.00 $34.30\nUPS WE 12/14/2024\nCarrier: RS-FX |Logistics Services-Return Carrier Charges - FX -| LGCA-PT-121424-1743 106 | EA $0.00 $2,046.88\nWE 12/14/2024\nCarrier: OB-FX | Outbound Carrier Charges - FX - WE 12/14/2024 | LGCA-PT-121424-1743 2|EA $0.00 $64.24\nREMITTANCE: Path-Tec LLC Dept 730079 P.O. Box 660919 Dallas, TX 75266-0919 Subtotal $2,145.42\nSales Tax $0.00\nTotal $2,145.42\nPayments/Credits $0.00\nPhone: Phone: 706-507-1445 Fax: 706-569-6369 Email: ptar@path-tec.com Balance Due $2,145.42\nPage | of |\n\na a a a a a a a a a a a a a a a a a a a a a a iE\na oe RR RF RF RF F RR RF RR R F RR RF FF FR R RR RF RF RF F R R RF F FF RF F RR FF RF F R FF H\nPirererararerererarprarerarerarererarararerire ra]\nPPP EP EG PEP Ra EP PEP EP PPP EP EPP EP EP PEPE aE EPP PP EP PEGE GG\nre fee ee ee Pe Fe fe Pe ee Pe Fe Fe g z PREe Fe Pe Fe Fe g yee\n[E EEEER A A A A A aa eee E Pee e eee & E pee baad\nee ee 3 a 4 & 4 & A A 2 ga i $6 8 222 eee &\nEREERPERPRREBREREFBERERERF RE EBRREERBERERPEBER BERBERS BERBER ERE RG\nHf\nPEEEE EE EE EE EE EE EE EERE EEE EERE EEE EE EE EE EE EE EE EE EE EE E @\nEF eee Ee & iE ee Be ee ee ee ee ee eB e eB ee ee eR Re Re Re Re ee ee Re ee e\nFe fate? efereferezteretererteteteiterefereterererere: &\nPe; EP EP PEPE PP EPP PP EPP PPP PP EPP PP PEP PP PPP PP PP PP Pe PP i\nFee eee ee ee eee eee eee eee ee ee Pe ee ee Pe ge ee PP Pe ge ee eg\nB\nPes il \u2014 2 \u00a2 2 E22 @ @ e 2 ee Ee E 8 @e@\u00a26 2 ee 2 BE & PERG 2D egg ERS\n2 FFF 2 Pe ese eG EE Ee ee Ef ee ke ee 5 3 Eg E FREE GEE, \u20ac Rk E A\nBBE erFeAaEeEE EEE EE EF 36662 ff Fe EF E Be e & ef fF H\nBR 3 i se ee ee ee eee F Eee EB & # Be E 8 ' RE F 6 & # e\nBBG A 88 ee eaaa EE g 2222 3 i 8 8 | @ r i\n[ A ee aka ba a a B Be EE Ui a \u00e9\n> ia fe s 6 \u00a7 $8 is\n2 & FEaE& & Fl B e E E &\nf= & & & 8 2 e\nE\n\u00a2 fe be Eee EE fe Pe fe \u00a9 2 Ee Pe Pe Pe Fe ee OP e@ fe eee \u00a2 ee EE\nS22 22 68 FF 82: se EE & F e F 5 5 2a egress FH\nrep pP f& re\u00a2 2 & 8 3 3 3 868 8 i\neg 2 2 & & B gz gz gz gz gz gz = gz gz gz gz g g g gz g g g zs \u00a2 &\n\u00a5 iy y sy Fe y Fe Fe FR ER PS FR PR ER ze FR \" \u00bb Ee Fe PRE ee Pe Ee\nSSR PAAASAADAAASAD LAD\nPe 22 fe Fe Fe tere se zrezrezretezreerezrereretretererzrerzresrteF?e\nEP RPPEEEPEEPERP ERP EP PEPE EE EEE EEE EEP EEE PEP EP EP EEE EE a\nFeEErEEREEERREREREPEREPEEEREREEEREERRREEEEREREEEEE ERG PY\nBede e pa ee bb ee be bbe ba ee ba ee ee ea pa ee bE ep eb\nBEeEReEee RE RE RBEeE BE RE BE BERBER EERE RE RRB REE BE RE RB Ee RBE RE EB Ee RBE RE\nEePEeERBE EE ER EERE RE EE ES ERE REE ERE EE ER EERE RE EE Ee EE BE SF\ni rr i re rr re rr re re rr re ee cn:\nPeBeERBERBEERRERERBREERBEERBERBEEREREERBEEEERBRERERERBEBRBEBEBRBERER EE E B\nbE ee @ 2 @ ee fg ge Ee eg Fe eg ee eg ee Ee eee ee ee ee e ee eg ee ee FG ee E r\nPEPE EEE EERE EERE EEE EE EEE EEE EEE EEE EE EE EE EE EE EE Ee 4\nF222 2 22 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 22 22 ~2 2 <2 2 2 2 2 2 <2 2 <2 2 22 2 2 82 i=\nFe Fr Fr Fr Fr Fr Fr Fr Fr Fr Fr Fr Fr Fr Fr Fr Fr Fr Fr Fr Fr Fr Fr Fr i\nHY\nFF EEE EB EE A\nBee eee Ee EER eS Ee Ess s Ee REE EER EE eee EE EE EE EEE Ee Ee GE OE OY\nz >\nEs = = = 2 =e =e fe fe fe fe fe se Fe Fe Fe Fe Se Se ee ee ee ee ee ee\nEEE EERE EER ERE RE ER RRR EEE RE EE GEER ERE EE EEE EEE EG EE ER Ed\nBeeeseee 2h s $e ee eee eee Eee eee ee EBS \u00e9 ae ee A\nS 2 2 2 S S S % S S 8 S S S s S S S S a a a 2 s fe\n& & & & & & & & & & = & & & a & & & & & & & & Ss we\nEos & & & & & & & & & & & & & & & is is is is is is is s He\nbs 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 & we\nEe fe fee ee ae ee be be bh ee le be be be ee ee ee be be be ee F\nke ee ee Ee ee eee eee ee ee ee ee ee EE Re ee Ee EE ee EE EE Ee Eg k 4\nB 8 8 8 8 8 8 8 & 8 & 8 & B & B & & BF & & FE & & & & & & & RF & &F ss &B & Be Ss & & & & B&F Bs B & @\nk k k k k k k k k k k k k k k k k ig k k ig k k C AA\nig & & & & & & & & & & & & & & & & & & a a a a 3 chia\nEESES EP EE EP EE EP ER EE EE ER EE EE ES ES EE EP EEEE EP ERP EE EEE\n\nme og & jf & & & F & R KR Rk K RF fF RF R iF KR RF R RF RR RF R fF KR RF fF F R lk KR F KF RF fF RF R iF KR RF R RF R RF KR RF F\nPrePeTa Tiree Tere Perera Pree rereriririririrere\nP A A A A A A A A A A A A A A A A A A A A A A A A\nBee Fe Fe Fe Fe Fe Pe Pe Pe ee zee Fe Fe Pe Pe Pe Pe ee\nPEA RARER ERE EEE PEE EET EEE EERE PERLE REE EEE a EGE\neR 3 ee fe ee bE eb Eek ees gE ee be eb be bb be bb ee GE oe be eb ER OG g\nEEE TE EEE EE EEE EEEE EE EEE FE EEE EE EEE EE EE EE EEE EE EER:\nef = & j@ & & @ & f@ & & &@ & jf &@ 8 & & & & & & & if & & & & & & & & & iff & & & & & & & & & & & & Be Fe\negeeee\u00e9e gg & ge eeee ge ge ig eieee et \u20ac ei ig ee eg eg ee et eg ge ge eg eg eg ee te ge\nPP Pee EEE Ee eee eee PEE eee Pe Ee Eee Pe ee eee Pee eee OB PB\nRo 8 8 PEEEERGESGERER REPRE EERE 2? 2 2 7 eG ee eee ee e 2 \u00a7\nEy se eee fF & OE OE RB RR 5 2 6 A be B eG ea @ 2 \u00ae & i 26 e EE E\nREE: 2 8 \u2014 fb 8 zg eg 3 g EE & s & 3 8 & ei ge B\nef @ Be e fe Es & BF = e Es B 88 8 & B\nB i iz fy 2 lz fe |r iz Z \u00a7 22 & F B\nzs oe 6 FE R g\u00a2&eE:Ee FEE z F 8 3 ze eee EE 3 2 = \u00a7 g 8 \u00a3 2 effete\nPPS PPP EPPS PLE\nEEE EEE EE EE EE EE EE EE EE EE EE EE EE EE EE EEE EE EE EE EE EE EE EOE\neee eee ee ee ee ee ee ee ee ee ee ee ee ee ee ee ee ee ee ee ee ee eg Ee\nPoP BR ee\nrFeEEEREERERRE ER EREERREREERERREREEERREREEERREREREERERERERE FE\nPE eEeEeEeEEeE ee ee ee ee ee ee ge ge gg ee ge ge ge ge gee oe oe oe ge Og Ge Og OE Oe\nbee ERERBERBERERBERBERBERBERBERERBERBERBERBERBERERBERBERBERBERERES\nPezgeeeg zg eekg zg eekgezeekgeiezgegezeegzgegeeezeezeeeezeeekgeiezgegkgeigeigzezeasz &\nBe eB ee eRe Ee ee ee ee eee eee ee ee ee ee Be ee ee Bee Be eB eB Be OR BB\nPeek ee ERR Eee ER ERE RR ER REE RE RRP RR EE RRR RRR ERR PRR EE ERR Re\nPe EERE RB EERE EEE EE ERE EERE REE BEER ERE ERB EE ERE EE EE ER EERE RB EERE E\nmp 22 22 2 2 2 2 2 2 2 2 2 22 2 2 2 2 2 2 2 2 8 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 & 2 2\nfo: eEE Ree ie ie eee ee ioe oefoeeefoeefeefoeeofoesefoaeefoeefeefoeOEfeoaRsefseeefoe ef eefoeOefoeeoefoPfeefFOe\nBF ORF PE RE BF RF BFR BP Be FOF RP BOP BOP Be\nEE EE a Sb 2 Ee\nPPEGEPELED PI TIEPEP PEELED PPP Ei tie ibe b iii al\n# 7 7 7 7 ik 7 7 7 zk 7 i ik 7 7 ik i 7 i i ik 7 ik 7 7\nEP oR bof @ &\u00a2 & ee fe & & & & bb eS 8 & & bf bb & fe fob bo eb eG fe fob be fob ee ob 8\nq 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7\na\nbok eg og ee Ee ee Be ee Ee ee ee ee EE oe oe eB e Ee EE ee Ee ee ee ee Ee EE Ee\nfe 2 8 3s 8 8 8 8 8 8 8 8 8 8 8 & & & FR F 8B & 8B 8B &B & BB & 8 & & B FE &B & B & B 8 & & & 8 B&B & B & B\nmB os fg & fF \u00a3 f & FB & & fF B fF B fF fF Ff B e & & B & & f & & Bf & & f& & s f f B f & & & f & & B tf & fF &\n\nRowe F RF RF R RF FF iF RF RF RK FR\ns\ni A A A A aa\nPERE REREE REE E\ngERE RE & ERE &\nE:ekeiee: Oe: OBE OB OE\ne& 2 & jf @ & @ & ff & f& @\n\u00a7 @ @ et \u20ac eg ee\nS fe fe be te & & & E BE Ie\n(bbe EP Ee EE EB\nge\npad\nFo\nEs\nA 2 2 & & & F\nef ei & ie eee & g\n+ 2326 \u20ac & Hy\n- 6b 8@ \u00a7 iE E& E 2 &\na 8 & Fa\n& o\n:\nz\n@: ee @ \u20ac & \u00a2 ef 8 2 eg\nERE REE & & OE OE RE\nPeEEEPESE EEE\n3\nCae ee\ne EE \u20ac Ee EF FE ee FE\nyee ee eee OOO\n2B BB F & 8 BB BE\nFREEEEREER OE &\nPee ee ERE EEE\ngEeERERBE RE ERE EE\ne222 2 2 82 2 & 2 & F\neg \u00a7 \u00a7 \u00a7 8 8 8 8 \u00a7 &\u00a7 & 8\nPEER. EREE RE Ee\n2 2 2 2 2 2 2 2 2 2 2\nB 3\n2 EE EE Ee EE E\ng @ & ig a |f\nPRG EER ERG EERE\npa Ee ee eee ee ORS\nPES EPER EP EE EE\n\nSubject: [EXTERNAL] Path-Tec, LLC Invoice # CINV94705\n\nFrom: Shirley Grimmett (sgrimmett @path-tec.com) <system @sent-via.netsuite.com>\nTo: Invoices@ouhealth.com\n\nCe:\n\nDear Customer,\n\nYour invoice is attached. Please remit payment at your earliest convenience.\n\nWe appreciate your business and value you as a customer. Please let us know if there is anything\nwe can do to improve your customer experience.\n\nSincerely,\n\nPath-Tec Accounts Receivable\n\nPh:706-507-3549\n\n",
+        "aggregated_supplier": "No result",
+        "supplier_id": "No ID",
+        "aggregated_address": "No result",
+        "spacy_results": [],
+        "fuzzy_results": [],
+        "sentence_results": []
+    },
+    "7959482-0_EmailBody.pdf": {
+        "ocr_text": "From Invoice Summary\nOne Vantage Way Invoice # INV109865\nSuite 5.130\nNashville TN 37228 PO#\nUnited States\nOffice: 6156200577 Date 1/1/2025\nBill To Terms Net 30\nATTN: CHRISTOPHER PATRICK Due Date 1/31/2025\nOU MEDICAL SYSTEM\n1122 NE 13th Street Amount Due $1,500.00\nOKLATIOMA CITY OK 73117 Service Period First Quarter of 2025\nInvoice Note\nDescription Quantity Rate Amount\nUnemployment Cost Control Program 0.1 $1,500.00 $1,500.00\nQuarterly Service Fee\nPay via ACH: Total $1,500.00\nBank Name: US Bank Payments $0.00\nAccount Name: Thomas and Thorngren Inc.\nAccount Number: 151200032564\nABA Number: 064000059\nBalance Due $1,500.00\nPayment Details to:\naccounting@thomas-and-company.com\nRemit Check Payments To:\nThomas & Company\nP.O. Box 645555\nCincinnati, OH 45264-5555\nOne Vantage Way, Suite B-130 P.O. Box 280100 Nashville, TN 37228 1 of1\nOffice: 615-242-8246 Fax: 615-242-8246\nwww.thomasandthorgren.com\n\nSubject: [EXTERNAL] Thomas & Company Invoice INV109865\n\nFrom: Accounting <accounting @thomas-and-company.com>\n\nTo: Invoices@ouhealth.com\n\nCe:\n\nDear Customer,\n\nYour quarterly Unemployment Cost Control Program invoice is attached. To facilitate and expedite\nboth of our business needs, our ACH information is included on the invoice for electronic\nremittance of payments.\n\nThank you for your business - we appreciate it very much.\n\nSincerely,\n\nThomas & Company\n\n",
+        "aggregated_supplier": "Thomas  company",
+        "supplier_id": "SUP-000158",
+        "aggregated_address": "po box 53696nirvine ca 92619nunited states of america",
+        "spacy_results": [
+            {
+                "item": "crosslands a and a rent all and sales co",
+                "score": 80.79296350479126
+            },
+            {
+                "item": "central pay services",
+                "score": 76.66329741477966
+            },
+            {
+                "item": "we are for good llc",
+                "score": 76.57970786094666
+            },
+            {
+                "item": "keep it local ok llc",
+                "score": 75.73701739311218
+            },
+            {
+                "item": "best buy for business",
+                "score": 75.50179362297058
+            }
+        ],
+        "fuzzy_results": [
+            {
+                "item": "thomas  company",
+                "score": 93
+            },
+            {
+                "item": "bd medical",
+                "score": 80
+            },
+            {
+                "item": "3m company",
+                "score": 80
+            },
+            {
+                "item": "ez way inc",
+                "score": 80
+            }
+        ],
+        "sentence_results": []
+    },
+    "7984912-3_EmailBody.pdf": {
+        "ocr_text": "Invoice\nInvoice Number PUESEZae\ncerecore Invoice Date FEE\nsnes\nOklahoma University Medical Ce Remittance Information:\n700 NE 13th Street CereCore\nOKLAHOMA CITY, OK 73104 MSC 30225\nP.O. Box 41500\nNashville, TN 37241-5000\n| | Category Description | _Tansctonbeesinfon | POH Tx | Ext Anon\n1775592-OUMI PII SQL Arch ELLKAY 1775592 -\n1 Hosting monthly fee 00397365 E $18,865.60\nImplement Non-Custom\n2 Software 1775592-OUMI PII SQL Arch ELLKAY 1775592 00397365 E $18,720.00\nInvoice payment is due upon receipt. Payments will be considered past due Subtotal $37,585.60\nafter Due Date and subject to any interest rates or penalties included in the Cumulative Tax $0.00\nMaster Services Agreement.\nPlease include your invoice number on your remittance.\n| . | | Total Amount Due $37,585.60\nThank you for choosing Cerecore. We sincerely appreciate your business.\nPlease call your Client Executive with any questions or comments about our\nperformance or this invoice.\nTax Amount by State\nOKLAHOMA $0.00\npage 1\n\nSubject: [EXTERNAL] OU Medicine Invoices from CereCore\n\nFrom: Sylva Kathy <Kathy.Sylva@CereCore.net>\n\nTo: Invoices@ouhealth.com, Deborah.McCormick@ ouhealth.com, Jennifer.White @ ouhealth.com\nCc: Gwendalynn.Barrow @ouhealth.com, Jennifer.Smith4 @ ouhealth.com,\nMaggie.Werschmidt@CereCore.net, Laurel.Durham@ouhealth.com\n\nHello,\n\nYour December invoices from CereCore are attached. We bill one month in arrears so the invoices\nyou are receiving are for services rendered in November.\n\nThank you for your business and please let me know if you have any questions.\n\nKathy Sylva, MBA\n\nSr. Accountant - Revenue\n\nCereCore\n\nKathy.sylva@ CereCore.net\n\nwww.CereCore.net\n\nThis email and any files transmitted with it may contain PRIVILEGED or CONFIDENTIAL\ninformation and may be read or used only by the intended recipient. If you are not the intended\nrecipient of the email or any of its attachments, please be advised that you have received this\nemail in error and that any use, dissemination, distribution, forwarding, printing, or copying of this\nemail or any attached files is strictly prohibited. If you have received this email in error, please\nimmediately purge it and all attachments and notify the sender by reply email or contact the\nsender at the number above\n\n",
+        "aggregated_supplier": "Cerecore",
+        "supplier_id": "SUP-000674",
+        "aggregated_address": "po box 53696nirvine ca 92619nunited states of america",
+        "spacy_results": [
+            {
+                "item": "crosslands a and a rent all and sales co",
+                "score": 83.47434997558594
+            },
+            {
+                "item": "we are for good llc",
+                "score": 80.64866662025452
+            },
+            {
+                "item": "keep it local ok llc",
+                "score": 79.07401919364929
+            },
+            {
+                "item": "do not use sup000526  acclarent inc",
+                "score": 77.9298722743988
+            },
+            {
+                "item": "sooner answer service",
+                "score": 77.52589583396912
+            },
+            {
+                "item": "the center for individuals with physical challenges",
+                "score": 77.38823890686035
+            },
+            {
+                "item": "make a wish foundation",
+                "score": 77.18373537063599
+            },
+            {
+                "item": "best buy for business",
+                "score": 76.36169791221619
+            },
+            {
+                "item": "do not use sup000443 zimmer us inc",
+                "score": 75.78951716423035
+            },
+            {
+                "item": "point of contact ltd",
+                "score": 75.7621705532074
+            }
+        ],
+        "fuzzy_results": [
+            {
+                "item": "cerecore",
+                "score": 100
+            },
+            {
+                "item": "mfi medical",
+                "score": 82
+            },
+            {
+                "item": "universal medical inc",
+                "score": 81
+            },
+            {
+                "item": "bd medical",
+                "score": 80
+            }
+        ],
+        "sentence_results": []
+    },
+    "7967491-0_EmailBody.pdf": {
+        "ocr_text": "Children's Hospital Colorado &\n\nDEPARTMENT OF PATHOLOGY AND LAB U\n\nPO BOX 912732\n\nDenver, CO 80291-2732 =e\n\n(855) 672-4823 Children\u2019s Hospital Colorado Date Billed 42/22/2024\n\nInvoice # 12300000551 22224\n\nOKLAHOMA U MED CENTER Amount Due $1,700.00\n\n700 NE 13th St\n\nOklahoma City, OK 73104 Amount Enclosed\n\nPage 1 of 1\n\nAccount Number: 1230000055 Please remit payment to: Children's Hospital Colorado\n\nPLEASE DETACH HERE RETURN TOP PORTION WITH YOUR PAYMENT ALL CHARGES ARE DUE AND PAYABLE UPON RECEIPT OF THIS STATEMENT\nDATE REC PATIENT NAME ACCN # TEST CODE CPT CODE DESCRIPTION CHARGE | CREDIT\n\nPrevious Balance $1,700.00\nUnresulted tests within the current month will appear on next month's statement.\n\nTotal Current Invoice 1230000055122224 Activity $0.00\n\nAMOUNT DUE $1,700.00\nCURRENT DAYS OVER 30 DAYS OVER 60 DAYS OVER 90 DAYS OVER 120 DAYS\n$0.00 $850.00 $850.00 $0.00 $0.00\n\nSubject: FW: [EXTERNAL] Childrens Hospital Colorado Current Invoice Available\n\nFrom: Green, Valerie (OUH) <Valerie.Green2@ouhealth.com>\n\nTo: Invoices@ouhealth.com\n\nCe:\n\nFrom: Yu, Zhongxin (HSC) <Zhongxin-Yu @ouhsc.edu>\n\nSent: Monday, December 16, 2024 8:09 AM\n\nTo: Green, Valerie (OUH) <Valerie.Green2@ouhealth.com>\n\nCc: Musselman, Loren (OUH) <Loren.Musselman@ouhealth.com>; Zahed, Kelly (OUH)\n<Kelly.Smith3 @ ouhealth.com>\n\nSubject: FW: [EXTERNAL] Childrens Hospital Colorado Current Invoice Available\n\nHi Valerie,\n\n| just downloaded the invoice (see attached). This is the electron microscopic examination billing.\n| still think we should setup to let them to send the invoice to billing directly, not to the pathologist\n&##128522;\n\nThank you for your help!\n\nZY\n\nFrom: donotreply @xifin.com <donotreply @ xifin.com>\n\nSent: Monday, December 16, 2024 7:56 AM\n\nSubject: [EXTERNAL] Childrens Hospital Colorado Current Invoice Available\n\nGreetings from Children's Hospital Colorado:\n\nOKLAHOMA U MED CENTER current invoice for our services is now available for viewing online.\nTo view and print invoice 1230000055121524, go to\nhttps://portal.xifin.com/clientportal/login.html?cn=chilhospco , click on the link and enter your user\nID and password.\n\nIf you have any questions or if you do not have a user ID and password, please contact us today\nat 720-777-6711, option 3 or email labclientservices @childrenscolorado.org .\n\nThanks from the Billing Staff at Children's Hospital Colorado!\n\n*\u201c**PLEASE DO NOT REPLY BACK TO THIS EMAIL AS IT DOES NOT RECEIVE INCOMING\nMESSAGES.***\n\nSent by XiFin, Inc. on behalf of Anschutz Lab.\n\n",
+        "aggregated_supplier": "Childrens hospital colorado",
+        "supplier_id": "SUP-000675",
+        "aggregated_address": "po box 53696nirvine ca 92619nunited states of america",
+        "spacy_results": [
+            {
+                "item": "crosslands a and a rent all and sales co",
+                "score": 80.0630271434784
+            },
+            {
+                "item": "keep it local ok llc",
+                "score": 77.71255373954773
+            },
+            {
+                "item": "we are for good llc",
+                "score": 76.99639797210693
+            },
+            {
+                "item": "do not use sup000526  acclarent inc",
+                "score": 75.98072290420532
+            }
+        ],
+        "fuzzy_results": [
+            {
+                "item": "childrens hospital colorado",
+                "score": 96
+            }
+        ],
+        "sentence_results": []
+    },
+    "7944774-2_EmailBody.pdf": {
+        "ocr_text": "== a INVOICE 8003683837 seme ie\nCardinal Health 414, LLC\nNuclear Pharmacy Services\n. P.O.BOX 70609\nCardinalHealth Chicago, IL 60673-0609\nPage 1 of 3\nve PAYER SHIP TO BILL TO\nfe: Payer # 4000000176 Ship-to # 2100001740 Bill-to # 3000043146\nOU MEDICAL CENTER OU MEDICAL CENTER Attention: ACCTS PAYABLE\nEDMOND EON OND : OU MEDICAL CENTER EDMOND\n1S BRYANT AVE ee 1S BRYANT AVE\nEDMOND, OK 73034 EDMOND, OK 73034\nEDMOND, OK \u2018\n73034-6309\n2100001740 |OU MEDICAL CENTER EDMOND | si 114 7/2024-11/23/2024 | 12/28/2024\nPlease DO NOT change your payment \u2018remit to\u2019 address without prior written notification from Cardinal Health. For assistance, please contact your local pharmacy or\nCardinal Health's Central Billing department at: 1-866-219-4427 or email Nuclear-Invoicing-Inquiries@cardinalhealth.com. Please remit your payment advice to\nremits@cardinalhealth.com\n1.00 ea Venti-Scan IV Kit 24\" 101903}009 117.73 117.73}\n1.00 dos |Tc-99m Macro Aggregated Albumin UD 102970}059 310.43 310.43\n1.00 dos |Tc-99m Pentetate UD 102990/009 272.33 272.33)\n1.00 ea After Hours Callout 198001 283.25 283.25)\n1.00 ea After Hours Delivery Charge 198002 175.00 175.00\nSub Total 1,158.74\nTox\nCash Total | $1,168.45USD__\nExcept for sales in CT, MA, ME, NY we impose a surcharge of 3% on the 3% Credit Card Surcharge $ 21.01 USD\ntransaction amount on all credit card products, which is not greater than Total including 3% surcharge $ 1,189.46 USD\nour cost of acceptance.We do not accept debit cards.\n_ Customer payment Due Date is displayed above. A service charge of 1.5% (or the maximum rate permitted by law, if less) applies on any amount not paid when due. a!\nIf this invoice reflects any discounted prices, credits or rebates or if price reductions are subsequently earned and paid with respect to the products or services described herein, then 3\nfederal law may require disclosure of the price reduction on your claim or cost reports to Medicare or Medicaid Reimbursement under 42 U.S.C. 1320(a)-7b(b)(3)(A). a\nConfidential b!\n8\n\nRee ae eae\n<= INVOICE 8003683837 So\n> a Itemized Billing List for period ending 11/23/2024 Re\nPage 2 of 3\nShip To #: 2100001740\nShip To Name: OU MEDICAL CENTER EDMOND.\nNUCLEAR MEDICINE\nOrders without PO #\n[Ree] Date  Beseiton eee a Meee ee ie eee\n190164 [11/18/24 Tc-99m Pentetate UD + 102990'009-Aerosol Ventilation | 35.00mCi \u2014 272.33, 0.00 Per Physician\u2019\nH { i Hy | i i\n190165 14/18/24 \u2018Tc-99m Macro Aggregated Albumin UD | 102970 059-Pulmonary Perfusion | 5.00mCi 310.43) 0.00 Per Physician\u2019\n190165 cad After Hours Callout | 198001) | 1.00.ea i 283.25) |\n190165 (11/18/24 After Hours Delivery Charge + 198002) i 1.00.ea | 175.00) |\n190166 | 11/18/24 Venti-Scan IV Kit 24\" | 101903 009-Aeroso! Ventilation | 1.00.ea | 117.73) 9.71 Per Physician\u2019\nSales Total for Orders without PO # $ 1,158.74\nTotal Sales $ 1,158.74 USD\nMN Care Tax $ 0.00 USD\nTotal Tax $ 9.71 USD\nInvoice Period Total $ 1,168.45 USD\nxd\nAll information included in this invoice is Confidential and may include Protected Health Information (\"PHI\"). The recipient is responsible for protecting all PHI as required under &\napplicable federal and state privacy and security laws, including the Health Insurance Portability and Accountability Act (\u201cHIPAA\u201d) and HITECH Act. =\n\u00a9\n3\n8\no\n\n= ae\ngins\n= INVOICE 8003683837 ee\nDelivery Charges for period ending 11/23/2024\nCardinalHealth\nPage 3 of 3\npei Customer:\n3\ngy\n3\n3\n\nSubject: invoices\n\nFrom: Lozano, Francisco (OUH) <Francisco.Lozano@ouhealth.com>\nTo: Invoices@ ouhealth.com\n\nCe:\n\nFrancisco Lozano\n\nFrancisco.lozano@ouhealth.com\n\nAccounts Payable Specialist , OU Health\n\nMailing Address: PO BOX 2489311 Oklahoma City, OK, 73124\nPhone: 405-764-8146\n\nPlease direct invoice submissions to:\n\nInvoices @ ouhealth.com\n\nPlease direct payment inquiries to:\n\nAP @ouhealth.com\n\n",
+        "aggregated_supplier": "Cardinal health 414 llc",
+        "supplier_id": "SUP-001163",
+        "aggregated_address": "po box 53696nirvine ca 92619nunited states of america",
+        "spacy_results": [
+            {
+                "item": "crosslands a and a rent all and sales co",
+                "score": 80.11618852615356
+            },
+            {
+                "item": "3m health information systems",
+                "score": 77.66096591949463
+            },
+            {
+                "item": "do not use sup000526  acclarent inc",
+                "score": 76.49412155151367
+            },
+            {
+                "item": "we are for good llc",
+                "score": 75.68283677101135
+            },
+            {
+                "item": "keep it local ok llc",
+                "score": 75.59585571289062
+            },
+            {
+                "item": "n line parking lot services",
+                "score": 75.34350752830505
+            }
+        ],
+        "fuzzy_results": [
+            {
+                "item": "cardinal health 414 llc",
+                "score": 96
+            },
+            {
+                "item": "cardinal health 108 llc",
+                "score": 87
+            },
+            {
+                "item": "cardinal health 110 llc",
+                "score": 87
+            },
+            {
+                "item": "ucsf medical center",
+                "score": 84
+            },
+            {
+                "item": "cardinal health 200 llc",
+                "score": 83
+            }
+        ],
+        "sentence_results": []
+    },
+    "7984912-1_EmailBody.pdf": {
+        "ocr_text": "Invoice\nInvoice Number PEE\ncerecore Invoice Date FEM\n1/725\nOklahoma University Medical Ce Remittance Information:\n700 NE 13th Street CereCore\nOKLAHOMA CITY, OK 73104 MSC 30225\nP.O. Box 41500\nNashville, TN 37241-5000\n| | Category Description | _Tansctonbeesinfon | POH Tx | Ext Anon\n1 Hosting 1773681 Hosting Support = $382.11\nInvoice payment is due upon receipt. Payments will be considered past due Subtotal $382.11\nafter Due Date and subject to any interest rates or penalties included in the Cumulative Tax $0.00\nMaster Services Agreement. -\nPlease include your invoice number on your remittance.\nTotal Ai it Di 382.11\nThank you for choosing Cerecore. We sincerely appreciate your business. otal Amount Due $\nPlease call your Client Executive with any questions or comments about our\nperformance or this invoice.\nTax Amount by State\nOKLAHOMA $0.00\npage 1\n\nSubject: [EXTERNAL] OU Medicine Invoices from CereCore\n\nFrom: Sylva Kathy <Kathy.Sylva@CereCore.net>\n\nTo: Invoices@ouhealth.com, Deborah.McCormick@ ouhealth.com, Jennifer.White @ ouhealth.com\nCc: Gwendalynn.Barrow @ouhealth.com, Jennifer.Smith4 @ ouhealth.com,\nMaggie.Werschmidt@CereCore.net, Laurel.Durham@ouhealth.com\n\nHello,\n\nYour December invoices from CereCore are attached. We bill one month in arrears so the invoices\nyou are receiving are for services rendered in November.\n\nThank you for your business and please let me know if you have any questions.\n\nKathy Sylva, MBA\n\nSr. Accountant - Revenue\n\nCereCore\n\nKathy.sylva@ CereCore.net\n\nwww.CereCore.net\n\nThis email and any files transmitted with it may contain PRIVILEGED or CONFIDENTIAL\ninformation and may be read or used only by the intended recipient. If you are not the intended\nrecipient of the email or any of its attachments, please be advised that you have received this\nemail in error and that any use, dissemination, distribution, forwarding, printing, or copying of this\nemail or any attached files is strictly prohibited. If you have received this email in error, please\nimmediately purge it and all attachments and notify the sender by reply email or contact the\nsender at the number above\n\n",
+        "aggregated_supplier": "Cerecore",
+        "supplier_id": "SUP-000674",
+        "aggregated_address": "po box 53696nirvine ca 92619nunited states of america",
+        "spacy_results": [
+            {
+                "item": "crosslands a and a rent all and sales co",
+                "score": 83.83474349975586
+            },
+            {
+                "item": "we are for good llc",
+                "score": 81.11297488212585
+            },
+            {
+                "item": "keep it local ok llc",
+                "score": 79.4677734375
+            },
+            {
+                "item": "the center for individuals with physical challenges",
+                "score": 78.22864055633545
+            },
+            {
+                "item": "sooner answer service",
+                "score": 78.19387316703796
+            },
+            {
+                "item": "make a wish foundation",
+                "score": 77.85283327102661
+            },
+            {
+                "item": "do not use sup000526  acclarent inc",
+                "score": 77.82935500144958
+            },
+            {
+                "item": "best buy for business",
+                "score": 76.51758790016174
+            },
+            {
+                "item": "point of contact ltd",
+                "score": 75.9547233581543
+            },
+            {
+                "item": "do not use sup000443 zimmer us inc",
+                "score": 75.80576539039612
+            }
+        ],
+        "fuzzy_results": [
+            {
+                "item": "cerecore",
+                "score": 100
+            },
+            {
+                "item": "versio",
+                "score": 83
+            },
+            {
+                "item": "mfi medical",
+                "score": 82
+            },
+            {
+                "item": "universal medical inc",
+                "score": 81
+            },
+            {
+                "item": "bd medical",
+                "score": 80
+            }
+        ],
+        "sentence_results": []
+    },
+    "7984912-5_EmailBody.pdf": {
+        "ocr_text": "Invoice\nInvoice Number PESEag\ncerecore Invoice Date FEM\nsnes\nOklahoma University Medical Ce Remittance Information:\n700 NE 13th Street CereCore\nOKLAHOMA CITY, OK 73104 MSC 30225\nP.O. Box 41500\nNashville, TN 37241-5000\n| | Category Description | _Tansctonbeesinfon | POH Tx | Ext Anon\nImplement Non-Custom 1775840-OUMI: OU Health Decommission\n1 Software 1775840 = $717.25\nInvoice payment is due upon receipt. Payments will be considered past due Subtotal $717.25\nafter Due Date and subject to any interest rates or penalties included in the Cumulative Tax $0.00\nMaster Services Agreement. -\nPlease include your invoice number on your remittance.\nTotal Ai it Di 717.25\nThank you for choosing Cerecore. We sincerely appreciate your business. otal Amount Due $\nPlease call your Client Executive with any questions or comments about our\nperformance or this invoice.\nTax Amount by State\nOKLAHOMA $0.00\npage 1\n\nSubject: [EXTERNAL] OU Medicine Invoices from CereCore\n\nFrom: Sylva Kathy <Kathy.Sylva@CereCore.net>\n\nTo: Invoices@ouhealth.com, Deborah.McCormick@ ouhealth.com, Jennifer.White @ ouhealth.com\nCc: Gwendalynn.Barrow @ouhealth.com, Jennifer.Smith4 @ ouhealth.com,\nMaggie.Werschmidt@CereCore.net, Laurel.Durham@ouhealth.com\n\nHello,\n\nYour December invoices from CereCore are attached. We bill one month in arrears so the invoices\nyou are receiving are for services rendered in November.\n\nThank you for your business and please let me know if you have any questions.\n\nKathy Sylva, MBA\n\nSr. Accountant - Revenue\n\nCereCore\n\nKathy.sylva@ CereCore.net\n\nwww.CereCore.net\n\nThis email and any files transmitted with it may contain PRIVILEGED or CONFIDENTIAL\ninformation and may be read or used only by the intended recipient. If you are not the intended\nrecipient of the email or any of its attachments, please be advised that you have received this\nemail in error and that any use, dissemination, distribution, forwarding, printing, or copying of this\nemail or any attached files is strictly prohibited. If you have received this email in error, please\nimmediately purge it and all attachments and notify the sender by reply email or contact the\nsender at the number above\n\n",
+        "aggregated_supplier": "Cerecore",
+        "supplier_id": "SUP-000674",
+        "aggregated_address": "po box 53696nirvine ca 92619nunited states of america",
+        "spacy_results": [
+            {
+                "item": "crosslands a and a rent all and sales co",
+                "score": 83.7190330028534
+            },
+            {
+                "item": "we are for good llc",
+                "score": 81.09610676765442
+            },
+            {
+                "item": "keep it local ok llc",
+                "score": 79.54077124595642
+            },
+            {
+                "item": "do not use sup000526  acclarent inc",
+                "score": 78.22032570838928
+            },
+            {
+                "item": "sooner answer service",
+                "score": 78.16065549850464
+            },
+            {
+                "item": "the center for individuals with physical challenges",
+                "score": 78.08825969696045
+            },
+            {
+                "item": "make a wish foundation",
+                "score": 77.81155109405518
+            },
+            {
+                "item": "best buy for business",
+                "score": 76.51946544647217
+            },
+            {
+                "item": "do not use sup000443 zimmer us inc",
+                "score": 76.13129615783691
+            },
+            {
+                "item": "point of contact ltd",
+                "score": 75.93309879302979
+            }
+        ],
+        "fuzzy_results": [
+            {
+                "item": "cerecore",
+                "score": 100
+            },
+            {
+                "item": "lyon software",
+                "score": 85
+            },
+            {
+                "item": "mfi medical",
+                "score": 82
+            },
+            {
+                "item": "universal medical inc",
+                "score": 81
+            },
+            {
+                "item": "bd medical",
+                "score": 80
+            }
+        ],
+        "sentence_results": []
+    },
+    "7972604-0_EmailBody.pdf": {
+        "ocr_text": "NEstIs\n&=\\ Nestle\nRemit To: Neste use 33 Invoice No. 9926361257\nDallas TX 75284-1933\nou Health Ship To/Consignee: 6573483\n1200 Childrens Ave OU Health\nBill To: Oklahoma City OK 73104-4637 The Childrens Hospital\n835 Stanton L Young Blvd\n7th Floor NICU\nOklahoma City OK 73104-5017\nInvoice Date: 12/19/2024\nTerms: Net 30 Days Credit Account: 6573473\nfrom date of invoice\nItem Code Description Size\nQuantity Price Amount(USD)\n0761303478822103 ALFAMINO Infant ACS002 6x400g N2 US\n12574185 4.000 CS 117.18 468.72\n1303478822\n0005000048519205 EXTENSIVE HA AIASP0004 6x400g US\n12565037 3.000 cS 135.00 405.00\n5000048519\nTotal: 7 Units Delivery No.: 8492885930 BOL: 00000009002413245\nSub-Total 873.72\nMin Order Chg QTY 35.00\nInvoice total if paid by 01/18/2025 908.72\nLine items: 2 Net weight 37.04 LB\nUnits: 7 Gross weight 50.71 LB\nCube (FT\u00b0/M \u00b0) 2.51 FT3\nContainer(s): 1 US Package\nSpecial Instructions:\nCUSTOMER SERVICE 877 4637853\na\nBrazell Brown, Tejon\u2019\nNestl\u00e9 USA Page 1 of 1\n\n'The price on this invoice may reflect a discount or is subject to a rebate that must be fully and accurately disclosed and reported\nin accordance with 42 U.S.C. Sec. 1320a-7b(b) and 42 C.F.R. Sec. 1001.952 and applicable state law.Customer must meet its\nlegal obligations to provide access to all information provided by Seller about this discount on request by the U.S. Department of\nHealth and Human Services (DHHS) or a state health care program or agency. If Customer is a GPO, then Customer must\ndisclose the discount or rebate to its members and notify each member of its need to disclose and report the discount in\naccordance with the federal anti-kickback statute and similar state law requirements. If Customer is a distributor that receives this\ndiscount or rebate on behalf of an end-user, then Customer must disclose the discount or rebate to the end-user and notify such\nend-user of its need to disclose and report the discount in accordance with the federal anti-kickback statute and similar state law\nrequirements. If Customer or the affiliates it owns or controls, if any, report their costs on a cost report required by DHHS or a\nstate agency, they must accurately report all discounts and rebates on their health care program cost reports.\"\n\nSubject: [EXTERNAL] Nestl\u00e9 Invoice-9926361257-OU Health-PO-00561751\nFrom: Nestle NDS Communication <nmessage @us.nestle.com>\n\nTo: Invoices@ouhealth.com\n\nCe:\n\nDear Valued Customer,\n\nAttached is your Nestl\u00e9 Invoice.Please forward it to Accounts Payable.\nQuestions regarding this email should be directed to Customer Service.\nThank you for your continued support of Nestl\u00e9 products. We value your\nbusiness.\n\nSincerely,\n\nNestl\u00e9 Customer Service\n\nPlease do not reply directly to this e-mail, as it is system-generated.\n\n",
+        "aggregated_supplier": "Crosslands a and a rent all and sales co",
+        "supplier_id": "SUP-003112",
+        "aggregated_address": "po box 53696nirvine ca 92619nunited states of america",
+        "spacy_results": [
+            {
+                "item": "crosslands a and a rent all and sales co",
+                "score": 85.37733554840088
+            },
+            {
+                "item": "the center for individuals with physical challenges",
+                "score": 81.27582669258118
+            },
+            {
+                "item": "we are for good llc",
+                "score": 80.57180047035217
+            },
+            {
+                "item": "department of state health services",
+                "score": 78.84910702705383
+            },
+            {
+                "item": "keep it local ok llc",
+                "score": 78.82446050643921
+            },
+            {
+                "item": "national association of benefits of and insurance professional okc chapter",
+                "score": 78.7713885307312
+            },
+            {
+                "item": "do not use sup000526  acclarent inc",
+                "score": 78.59380841255188
+            },
+            {
+                "item": "best buy for business",
+                "score": 77.97294855117798
+            },
+            {
+                "item": "make a wish foundation",
+                "score": 77.9180109500885
+            },
+            {
+                "item": "3m health information systems",
+                "score": 77.68048048019409
+            },
+            {
+                "item": "us department of of homeland security",
+                "score": 77.32610702514648
+            },
+            {
+                "item": "city of hope national medical center",
+                "score": 77.20975875854492
+            },
+            {
+                "item": "ima  independent medical associates",
+                "score": 76.88793540000916
+            },
+            {
+                "item": "point of contact ltd",
+                "score": 76.25464200973511
+            },
+            {
+                "item": "sooner answer service",
+                "score": 76.2133777141571
+            },
+            {
+                "item": "vision service plan insurance",
+                "score": 76.21208429336548
+            },
+            {
+                "item": "n line parking lot services",
+                "score": 76.19969248771667
+            },
+            {
+                "item": "system one medical",
+                "score": 76.17068886756897
+            },
+            {
+                "item": "central pay services",
+                "score": 76.02936625480652
+            },
+            {
+                "item": "first choice coffee services",
+                "score": 76.01851224899292
+            },
+            {
+                "item": "turn the ship around llc",
+                "score": 75.30664801597595
+            },
+            {
+                "item": "do not use sup000443 zimmer us inc",
+                "score": 75.16888976097107
+            }
+        ],
+        "fuzzy_results": [
+            {
+                "item": "seattle childrens hospital",
+                "score": 81
+            }
+        ],
+        "sentence_results": []
+    },
+    "7995540-0_EmailBody.pdf": {
+        "ocr_text": "\u201c3X Nestle\n&=\\ Nestle\nRemit To: Nestl\u00e9 USA .\nBo. eon 841933 Invoice No. 9926517653\nDallas TX 75284-1933\n6573473 5500504844\nDate shipped Request. Del.Date DC/Plant\n12/18/2024 12/20/2024\nou Health Ship To/Consignee: 6573483\n1200 Childrens Ave OU Health\nBill To: Oklahoma City OK 73104-4637 The Childrens Hospital\n835 Stanton L Young Blvd\n7th Floor NICU\nOklahoma City OK 73104-5017\nInvoice Date: 12/20/2024\nTerms: Net 30 Days Credit Account: 6573473\nfrom date of invoice\nShipped Via/Vessel Terms of Deliver Customer's P.O. Number\nPO-00568127\nItem Code Description Size\nQuantity Price Amount(USD)\n0761303478822103 ALFAMINO Infant ACS002 6x400g N2 US\n12574185 3.000 cS 117.18 351.54\n1303478822\nTotal: 3 Units Delivery No.: 8493015039 BOL: 00000009002420038\nSub-Total 351.54\nMin Order Chg QTY 15.00\nInvoice total if paid by 01/19/2025 366.54\nLine items: 1 Net weight 15.87 LB\nUnits: 3 Gross weight 22.17 LB\nCube (FT\u00b0/M \u00b0) 1.08 FT3\nContainer(s): 1 US Package\nSpecial Instructions:\nCUSTOMER SERVICE 877 4637853\nREGULATORY ACCOUNTING AND REPORTING STATEMENT ON REVERSE\nBrazell Brown, Tejon\u2019\nNestl\u00e9 USA Page 1 of 1\n\n'The price on this invoice may reflect a discount or is subject to a rebate that must be fully and accurately disclosed and reported\nin accordance with 42 U.S.C. Sec. 1320a-7b(b) and 42 C.F.R. Sec. 1001.952 and applicable state law.Customer must meet its\nlegal obligations to provide access to all information provided by Seller about this discount on request by the U.S. Department of\nHealth and Human Services (DHHS) or a state health care program or agency. If Customer is a GPO, then Customer must\ndisclose the discount or rebate to its members and notify each member of its need to disclose and report the discount in\naccordance with the federal anti-kickback statute and similar state law requirements. If Customer is a distributor that receives this\ndiscount or rebate on behalf of an end-user, then Customer must disclose the discount or rebate to the end-user and notify such\nend-user of its need to disclose and report the discount in accordance with the federal anti-kickback statute and similar state law\nrequirements. If Customer or the affiliates it owns or controls, if any, report their costs on a cost report required by DHHS or a\nstate agency, they must accurately report all discounts and rebates on their health care program cost reports.\"\n\nSubject: [EXTERNAL] Nestl\u00e9 Invoice-992651 7653-OU Health-PO-00568127\nFrom: Nestle NDS Communication <nmessage @us.nestle.com>\n\nTo: Invoices@ouhealth.com\n\nCe:\n\nDear Valued Customer,\n\nAttached is your Nestl\u00e9 Invoice.Please forward it to Accounts Payable.\nQuestions regarding this email should be directed to Customer Service.\nThank you for your continued support of Nestl\u00e9 products. We value your\nbusiness.\n\nSincerely,\n\nNestl\u00e9 Customer Service\n\nPlease do not reply directly to this e-mail, as it is system-generated.\n\n",
+        "aggregated_supplier": "Crosslands a and a rent all and sales co",
+        "supplier_id": "SUP-003112",
+        "aggregated_address": "po box 53696nirvine ca 92619nunited states of america",
+        "spacy_results": [
+            {
+                "item": "crosslands a and a rent all and sales co",
+                "score": 85.24469137191772
+            },
+            {
+                "item": "the center for individuals with physical challenges",
+                "score": 81.14345669746399
+            },
+            {
+                "item": "we are for good llc",
+                "score": 80.44873476028442
+            },
+            {
+                "item": "department of state health services",
+                "score": 79.01896834373474
+            },
+            {
+                "item": "keep it local ok llc",
+                "score": 78.77527475357056
+            },
+            {
+                "item": "national association of benefits of and insurance professional okc chapter",
+                "score": 78.7327766418457
+            },
+            {
+                "item": "do not use sup000526  acclarent inc",
+                "score": 78.34704518318176
+            },
+            {
+                "item": "best buy for business",
+                "score": 77.87646651268005
+            },
+            {
+                "item": "3m health information systems",
+                "score": 77.5601863861084
+            },
+            {
+                "item": "make a wish foundation",
+                "score": 77.42233276367188
+            },
+            {
+                "item": "us department of of homeland security",
+                "score": 77.41764187812805
+            },
+            {
+                "item": "city of hope national medical center",
+                "score": 77.22498774528503
+            },
+            {
+                "item": "ima  independent medical associates",
+                "score": 76.74227952957153
+            },
+            {
+                "item": "sooner answer service",
+                "score": 76.33005380630493
+            },
+            {
+                "item": "vision service plan insurance",
+                "score": 76.30879282951355
+            },
+            {
+                "item": "system one medical",
+                "score": 76.26286149024963
+            },
+            {
+                "item": "point of contact ltd",
+                "score": 76.24245882034302
+            },
+            {
+                "item": "first choice coffee services",
+                "score": 76.13222002983093
+            },
+            {
+                "item": "n line parking lot services",
+                "score": 76.12957954406738
+            },
+            {
+                "item": "central pay services",
+                "score": 76.10336542129517
+            },
+            {
+                "item": "turn the ship around llc",
+                "score": 75.5897045135498
+            },
+            {
+                "item": "cardinal health medical products and services",
+                "score": 75.03871321678162
+            },
+            {
+                "item": "board of certification for emergency nursing",
+                "score": 75.00796914100647
+            }
+        ],
+        "fuzzy_results": [
+            {
+                "item": "seattle childrens hospital",
+                "score": 81
+            }
+        ],
+        "sentence_results": []
+    }
+}

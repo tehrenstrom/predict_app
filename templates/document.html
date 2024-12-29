@@ -34,26 +34,26 @@
         </div>
 
         <!-- Aggregated Supplier -->
-<div class="card mb-4">
-    <div class="card-header bg-primary text-white">
-        Aggregated Supplier
-    </div>
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                Aggregated Supplier
+            </div>
+            <div class="card-body">
+                <p><strong>Supplier Name:</strong> {{ result.get('aggregated_supplier', 'No result') }}</p>
+                <p><strong>Supplier ID:</strong> {{ result.get('supplier_id', 'No result') }}</p>
+            </div>
+        </div>
 
-            <!-- Aggregated Remit-To Address -->
+        <!-- Aggregated Remit-To Address -->
         <div class="card mb-4">
             <div class="card-header bg-success text-white">
                 Aggregated Remit-To Address
             </div>
             <div class="card-body">
-                <p class="card-text">{{ result.get('aggregated_address', 'No result') }}</p>
+                <p><strong>Address:</strong> {{ result.get('aggregated_address', 'No result') }}</p>
+                <p><strong>Address Supplier ID:</strong> {{ result.get('address_supplier_id', 'No result') }}</p>
             </div>
         </div>
-
-    <div class="card-body">
-        <p><strong>Supplier Name:</strong> {{ result.get('aggregated_supplier', 'No result') }}</p>
-        <p><strong>Supplier ID:</strong> {{ result.get('supplier_id', 'No result') }}</p>
-    </div>
-</div>
 
         <!-- PDF Viewer -->
         <div class="card mb-4">
@@ -112,7 +112,7 @@
             <div class="col-md-4">
                 <h3>Remit-To Address spaCy Results</h3>
                 <ul>
-                    {% for address in result.get('spacy_results', []) %}
+                    {% for address in result.get('address_spacy_results', []) %}
                     <li>{{ address }}</li>
                     {% else %}
                     <li>No addresses found</li>
@@ -122,7 +122,7 @@
             <div class="col-md-4">
                 <h3>Remit-To Address Fuzzy Results</h3>
                 <ul>
-                    {% for address in result.get('fuzzy_results', []) %}
+                    {% for address in result.get('address_fuzzy_results', []) %}
                     <li>{{ address.item }} (Score: {{ address.score }})</li>
                     {% else %}
                     <li>No addresses found</li>
@@ -132,7 +132,7 @@
             <div class="col-md-4">
                 <h3>Remit-To Address Sentence Transformer Results</h3>
                 <ul>
-                    {% for address in result.get('sentence_results', []) %}
+                    {% for address in result.get('address_sentence_results', []) %}
                     <li>{{ address.item }} (Score: {{ address.score }})</li>
                     {% else %}
                     <li>No addresses found</li>
