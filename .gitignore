@@ -1,3 +1,4 @@
 3.11.x/lib/python3.11/site-packages/
 *.csv
 *.pdf
+myenv/
